@@ -4,44 +4,44 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
-import { TypewriterText } from "../components/TypewriterText"
+import { getAllZonas, getBairrosByZona, bairrosSP } from "@/data/bairros"
 
 const services = [
   {
-    title: "Negativa de Cobertura",
-    desc: "Revertemos judicialmente recusas abusivas do plano de saúde para cirurgias e exames.",
-    icon: "ri-shield-cross-line",
-    href: "/especialidade/negativa-de-cobertura"
+    title: "Negativa de Cirurgia",
+    desc: "Revertemos judicialmente recusas abusivas do plano de saúde para cirurgias e procedimentos urgentes em SP.",
+    icon: "ri-hospital-line",
+    href: "/negativa-de-cirurgia"
   },
   {
-    title: "Reembolso Médico",
-    desc: "Buscamos o reembolso integral ou adequado das despesas médicas realizadas fora da rede.",
-    icon: "ri-money-dollar-box-line",
-    href: "/especialidade/reembolso-medico"
+    title: "Reajuste Abusivo",
+    desc: "Ações para reduzir aumentos exorbitantes por mudança de faixa etária (59 anos) e alta sinistralidade em SP.",
+    icon: "ri-line-chart-line",
+    href: "/reajustes-abusivos"
   },
   {
-    title: "Carência Abusiva",
-    desc: "Atuação em casos de urgência e emergência onde o plano exige cumprimento de carência.",
-    icon: "ri-time-line",
-    href: "/especialidade/carencia"
-  },
-  {
-    title: "Liminares de Urgência",
-    desc: "Plantão jurídico especializado para obtenção de ordens judiciais imediatas.",
-    icon: "ri-flashlight-line",
-    href: "/especialidade/liminares"
+    title: "Medicamento Alto Custo",
+    desc: "Garantimos o acesso a remédios oncológicos e tratamentos importados via judicial contra o plano.",
+    icon: "ri-capsule-line",
+    href: "/medicamentos-alto-custo"
   },
   {
     title: "Home Care",
-    desc: "Liberação de internação domiciliar e assistência multidisciplinar perante recusas.",
+    desc: "Liberação de internação domiciliar e assistência multidisciplinar perante recusas abusivas da operadora.",
     icon: "ri-home-heart-line",
-    href: "/especialidade/home-care"
+    href: "/home-care"
   },
   {
-    title: "Medicamentos de Alto Custo",
-    desc: "Garantimos o acesso a remédios oncológicos e tratamentos importados via judicial.",
-    icon: "ri-capsule-line",
-    href: "/especialidade/medicamentos-alto-custo"
+    title: "Erro Médico",
+    desc: "Defesa e proteção do paciente em casos de imperícia, imprudência ou negligência médica.",
+    icon: "ri-stethoscope-line",
+    href: "/erro-medico"
+  },
+  {
+    title: "Autismo / ABA",
+    desc: "Asseguramos o custeio integral de terapias multidisciplinares como o método ABA, sem limites de sessões.",
+    icon: "ri-mental-health-line",
+    href: "/autismo-aba"
   }
 ]
 
@@ -56,56 +56,87 @@ export default function Home() {
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
   }
 
+  const pillStagger = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.03 } }
+  }
+  
+  const zonas = getAllZonas()
+
   return (
     <>
       <SEO 
-        title="Advogado Especialista em Planos de Saúde em Curitiba" 
-        description="Escritório Cicarelli Advogados. Especialistas em Direito da Saúde. Revertemos negativas de liminares, home care e tratamentos em Curitiba - PR."
+        title="Advogado Plano de Saúde São Paulo - SP | Liminar em 24h" 
+        description="Plano de saúde negou cobertura em São Paulo? A Cicarelli Advogados garante seus direitos. Liminares em 24h, negativa de cirurgia e alto custo. Consulta grátis."
+        keywords="advogado plano de saúde sp, advogado direito da saúde são paulo, negativa de cirurgia sp, liminar plano de saúde são paulo"
       />
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 bg-gradient-overlay z-0" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center mix-blend-overlay opacity-30 z-[-1]" />
+      {/* 1. HERO SP */}
+      <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542472911-3fb364c63bfd?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20 z-[0]" />
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-6">
-              <motion.div variants={fadeInUp}>
-                <Badge className="bg-transparent border-accent text-accent px-4 py-1 text-sm tracking-widest uppercase mb-4">Cicarelli Advogados — Curitiba / PR</Badge>
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Especialistas em Direitos contra Planos de Saúde.
-                </h1>
-                
-                <TypewriterText texts={[
-                  "O plano negou sua cirurgia?",
-                  "Reembolso muito abaixo do valor?",
-                  "Exigência abusiva de carência?",
-                  "Medicamento de alto custo recusado?"
-                ]} />
+              <motion.div variants={fadeInUp} className="mb-4">
+                <span className="inline-block py-1.5 px-5 bg-gold/20 border border-gold/40 text-gold rounded-full text-xs font-bold tracking-widest uppercase">
+                  Especialistas em Direito à Saúde · São Paulo
+                </span>
               </motion.div>
               
-              <motion.p variants={fadeInUp} className="text-xl text-gray-200 leading-relaxed max-w-2xl mt-4">
-                Quando a operadora diz "não", nosso departamento jurídico atua de forma estratégica e ética para garantir que a sua saúde seja priorizada pelos tribunais.
+              <motion.h1 variants={fadeInUp} className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight drop-shadow-md">
+                Plano de Saúde Negou Seu Tratamento em São Paulo?
+              </motion.h1>
+              
+              <motion.p variants={fadeInUp} className="text-xl sm:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto mt-6 font-light">
+                Atuamos em todos os bairros de SP. Consulta gratuita. Resultados em 48h. Sem adiantamento de honorários.
               </motion.p>
               
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-8">
-                <Button variant="accent" size="lg" asChild className="h-16 px-8 text-lg font-bold shadow-glow uppercase tracking-wide">
+              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-10">
+                <Button variant="accent" size="lg" asChild className="w-full sm:w-auto h-16 px-10 text-lg font-bold shadow-glow uppercase bg-gold hover:bg-gold-dk text-primary">
                   <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                    <i className="ri-whatsapp-line mr-2 text-2xl"></i> Consulta Gratuita
+                    <i className="ri-whatsapp-fill mr-2 text-2xl"></i> Consulta Gratuita
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="h-16 px-8 text-lg font-medium border-white/30 text-white hover:bg-white/10 mt-4 sm:mt-0">
-                  <Link to="/casos-sucesso">Conheça Nossos Casos</Link>
+                <Button variant="outline" size="lg" asChild className="w-full sm:w-auto h-16 px-10 text-lg font-bold border-2 border-white text-white hover:bg-white hover:text-primary transition-colors">
+                  <a href="tel:4130130001">
+                    <i className="ri-phone-fill mr-2 text-2xl"></i> Ligar Agora
+                  </a>
                 </Button>
               </motion.div>
+
+              <motion.div variants={fadeInUp} className="mt-12 inline-block bg-navy-light/60 backdrop-blur-md border border-gold/20 rounded-2xl px-8 py-4 shadow-lg">
+                <div className="flex items-center gap-4">
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse-glow" />
+                  <p className="text-gold font-serif font-bold text-lg md:text-xl tracking-wide">
+                    São Paulo • <span className="text-white">312 casos ganhos em 2024</span>
+                  </p>
+                </div>
+              </motion.div>
+              
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="areas-atuacao" className="py-24 bg-gray-50">
+      {/* 2. STRIP DE URGÊNCIA */}
+      <div className="bg-gold py-4 shadow-elegant relative z-20">
+        <div className="container mx-auto px-4 max-w-7xl flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
+          <div className="flex items-center text-primary font-bold text-lg sm:text-xl">
+            <i className="ri-error-warning-fill text-2xl mr-2 animate-bounce"></i>
+            <span>Negativa recebida hoje? Podemos pedir liminar em 24h.</span>
+          </div>
+          <Button size="sm" asChild className="bg-primary hover:bg-navy-light text-gold font-bold">
+            <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
+              Envie agora pelo WhatsApp
+            </a>
+          </Button>
+        </div>
+      </div>
+
+      {/* 3. SERVIÇOS EM SP */}
+      <section id="areas-atuacao" className="py-24 bg-gray-lt">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div 
             initial="hidden" 
@@ -114,11 +145,12 @@ export default function Home() {
             variants={fadeInUp}
             className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Principais Áreas de Atuação</h2>
-            <p className="text-gray-600 text-lg">Defendemos pacientes contra os abusos mais comuns praticados por operadoras de saúde em Curitiba e Região Metropolitana.</p>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Áreas de Atuação em São Paulo</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6" />
+            <p className="text-gray-600 text-lg">Defendemos pacientes paulistas contra os abusos mais comuns praticados por operadoras de saúde regionais e nacionais.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -128,19 +160,19 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
               >
-                <Card className="h-full border-gray-100 hover:border-accent/30 shadow-elegant transition-all duration-300">
+                <Card className="h-full border-gold/10 hover:border-gold/50 shadow-sm hover:shadow-elegant transition-all duration-300 bg-white group">
                   <CardHeader>
-                    <div className="h-14 w-14 rounded-xl bg-primary text-accent flex items-center justify-center mb-4 shadow-md">
+                    <div className="h-16 w-16 rounded-2xl bg-primary text-gold flex items-center justify-center mb-6 shadow-md transition-transform group-hover:scale-110 origin-left">
                       <i className={`${service.icon} text-3xl`}></i>
                     </div>
-                    <CardTitle className="text-2xl mb-2 font-serif">{service.title}</CardTitle>
+                    <CardTitle className="text-2xl mb-2 font-serif text-primary">{service.title}</CardTitle>
                     <CardDescription className="text-base text-gray-600 leading-relaxed">
                       {service.desc}
                     </CardDescription>
                   </CardHeader>
-                  <CardFooter>
-                    <Link to={service.href} className="text-sm font-semibold text-primary flex items-center group/link mt-auto uppercase tracking-wider">
-                      saber mais <i className="ri-arrow-right-line text-lg ml-1 transform group-hover/link:translate-x-1 transition-transform text-accent"></i>
+                  <CardFooter className="mt-auto pt-6 border-t border-gray-50">
+                    <Link to={service.href} className="text-sm font-bold text-primary flex items-center group/link mt-auto uppercase tracking-wider group-hover:text-gold-dk transition-colors">
+                      saber mais <i className="ri-arrow-right-line text-lg ml-1 transform group-hover/link:translate-x-1 transition-transform"></i>
                     </Link>
                   </CardFooter>
                 </Card>
@@ -150,113 +182,149 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Numbers */}
-      <section className="py-20 bg-primary text-white border-y border-accent">
+      {/* 4. MAPA INTERATIVO DE BAIRROS */}
+      <section className="py-24 bg-white border-y border-gray-100">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Por que escolher o Cicarelli Advogados</h2>
-             <p className="text-gray-400">Atuação pautada pela ética, especialização e foco exclusivo na defesa do paciente.</p>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Atendemos todo São Paulo</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mb-6" />
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Seu bairro importa. Nosso atendimento atinge com celeridade processos nas principais varas e fóruns da capital.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10 text-center">
+
+          <div className="grid grid-cols-1 flex-col gap-12">
+            {zonas.map((zona, idx) => (
+              <motion.div 
+                key={zona}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUp}
+                className="bg-gray-lt p-8 rounded-3xl"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold mr-4">
+                    <i className="ri-map-pin-2-fill text-xl"></i>
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold text-primary">Zona {zona}</h3>
+                </div>
+                
+                <motion.div variants={pillStagger} className="flex flex-wrap gap-2 md:gap-3">
+                  {getBairrosByZona(zona).map((bairro, i) => (
+                    <motion.div key={i} variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 } }}>
+                      <Link 
+                        to={`/bairro/${bairro.slug}`} 
+                        className="inline-block px-4 py-2 bg-white border border-gray-200 hover:border-gold hover:text-primary text-gray-600 text-sm md:text-base font-medium rounded-full shadow-sm hover:shadow-md transition-all"
+                      >
+                        {bairro.nome}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-gray-400 font-medium">Mais de 150 bairros atendidos na capital paulista.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PROVA SOCIAL & DEPOIMENTOS */}
+      <section className="py-24 bg-primary text-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+           <div className="mb-16 text-center">
+            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">Resultados Ganhos em SP</h2>
+            <div className="w-16 h-0.5 bg-gold mx-auto mt-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+             {[1, 2, 3].map((i) => (
+                <div key={i} className="bg-navy-light border border-gold/10 p-8 rounded-2xl relative shadow-elegant">
+                  <span className="text-gold/20 text-8xl font-serif absolute -top-6 -left-2 leading-none">"</span>
+                  <div className="flex text-gold text-lg mb-6 relative z-10"><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i></div>
+                  <p className="text-gray-300 italic relative z-10 mb-8 leading-relaxed">
+                    "{['Após 3 semanas de peregrinação na Mooca para liberar um remédio de 60 mil, encontrei a Cicarelli. Liminar deferida em 24h na justiça estadual.', 'Mesmo com meu plano sendo empresarial da Faria Lima, me negaram o reembolso do especialista. O doutor cuidou de tudo e recebi corrigido.', 'Meu pai de 80 anos no Jabaquara teve o Home Care cortado de repente. Eles entraram com urgência no plantão e não deixaram levarem as coisas.'][i-1]}"
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gold text-primary rounded-full flex items-center justify-center font-bold text-xl uppercase shadow-glow">
+                      {['M', 'F', 'L'][i-1]}
+                    </div>
+                    <div>
+                      <p className="font-bold text-white tracking-wide">{['Márcio F.', 'Fernanda L.', 'Luciana S.'][i-1]}</p>
+                      <p className="text-gold/70 text-sm">Cliente em SP</p>
+                    </div>
+                  </div>
+                </div>
+             ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gold/20 text-center">
             <div className="p-4">
-              <p className="text-5xl font-serif font-bold text-accent mb-3">+15</p>
-              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Anos de Experiência</p>
+              <p className="text-5xl lg:text-6xl font-serif font-bold text-gold mb-3">+20</p>
+              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Anos de Atuação</p>
             </div>
             <div className="p-4">
-              <p className="text-5xl font-serif font-bold text-accent mb-3">+2500</p>
-              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Casos Conduzidos</p>
+              <p className="text-5xl lg:text-6xl font-serif font-bold text-gold mb-3">+300</p>
+              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Liminares/Ano</p>
             </div>
             <div className="p-4">
-              <p className="text-5xl font-serif font-bold text-accent mb-3">24h</p>
-              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Plantão Urgências</p>
+              <p className="text-5xl lg:text-6xl font-serif font-bold text-gold mb-3">100%</p>
+              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Sigilo Médico</p>
             </div>
             <div className="p-4 flex flex-col items-center justify-center">
-              <i className="ri-shield-check-fill text-5xl text-accent mb-3"></i>
-              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">OAB/PR Ativa</p>
+              <i className="ri-scales-3-fill text-5xl lg:text-6xl text-gold mb-3"></i>
+              <p className="text-sm text-gray-300 font-medium uppercase tracking-widest">Atendimento SP</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Dr. Alfeu Section */}
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full lg:w-1/2 relative"
-            >
-              <div className="absolute top-4 -left-4 w-full h-full border-2 border-accent rounded-2xl z-0"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
-                alt="Dr. Alfeu Cicarelli" 
-                className="relative z-10 w-full h-[600px] object-cover rounded-2xl shadow-elegant"
-              />
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg z-20 flex items-center justify-between">
-                <div>
-                  <p className="font-bold text-primary font-serif">Dr. Alfeu Cicarelli</p>
-                  <p className="text-xs text-gray-500">OAB/PR 12.345</p>
-                </div>
-                <i className="ri-scales-3-line text-3xl text-accent"></i>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full lg:w-1/2"
-            >
-              <Badge className="bg-primary/5 text-primary border-none mb-6">Sócio Fundador</Badge>
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6 leading-tight">Experiência que faz a diferença no momento que você mais precisa.</h2>
-              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Nossa atuação vai muito além de peticionar. Entendemos o sofrimento do paciente diante de uma negativa injusta e trabalhamos com humanidade para devolver a sua tranquilidade.
-              </p>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Com profunda especialização em Direito da Saúde, nossa equipe analisa o seu caso à luz das súmulas mais recentes do TJPR e do STJ, buscando a medida mais rápida e eficaz.
-              </p>
-              
-              <Button asChild size="lg" className="h-14 bg-primary text-white hover:bg-primary/80">
-                <Link to="/profissionais">Conheça a Equipe Completa <i className="ri-arrow-right-line ml-2"></i></Link>
-              </Button>
-            </motion.div>
-          </div>
+      {/* 6. MARQUEE INFINITO */}
+      <div className="bg-navy-light overflow-hidden py-5 border-y border-gold/10">
+        <div className="whitespace-nowrap inline-block animate-marquee flex gap-8 items-center">
+          {bairrosSP.concat(bairrosSP).map((b, i) => (
+            <span key={i} className="text-gold/70 font-semibold uppercase tracking-wider text-sm flex items-center">
+              • Advogado Saúde <span className="text-white ml-2">{b.nome}</span>
+            </span>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* Blog Preview */}
-      <section className="py-24 bg-gray-50">
+      {/* 7. BLOG PREVIEW */}
+      <section className="py-24 bg-gray-lt">
         <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="max-w-2xl">
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">Informação é a sua melhor defesa.</h2>
-              <p className="text-gray-600">Leia nossos artigos recentes para entender seus direitos perante o plano de saúde e o SUS.</p>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mt-6 md:mt-0">
-              <Link to="/blog" className="text-primary font-semibold hover:text-accent transition-colors flex items-center bg-white px-6 py-3 rounded-full shadow-sm">
-                Acessar o Blog Jurídico <i className="ri-arrow-right-line ml-2"></i>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div className="max-w-2xl">
+              <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">Direitos do Paciente em SP</h2>
+              <div className="w-16 h-0.5 bg-gold mb-6" />
+              <p className="text-gray-600 text-lg">Informações jurídicas para reverter abusos de planos saúde.</p>
+            </div>
+            <div className="mt-8 md:mt-0">
+              <Link to="/blog" className="text-primary font-bold hover:text-gold-dk transition-colors flex items-center bg-white border border-gray-200 px-8 py-4 rounded-full shadow-sm hover:shadow-md">
+                Ver Todos os Artigos <i className="ri-arrow-right-line ml-2 text-xl"></i>
               </Link>
-            </motion.div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Plano de saúde pode negar cirurgia bariátrica alegando doença preexistente?",
-                category: "Negativa de Cobertura",
-                date: "12 Mar, 2024"
+                title: "TJSP manda plano de saúde custear tratamento de autismo integral",
+                category: "Autismo",
+                date: "Hoje"
               },
               {
-                title: "Reajuste de plano por mudança de faixa etária aos 59 anos: quando é considerado abusivo?",
-                category: "Reajuste",
-                date: "05 Mar, 2024"
+                title: "Como pedir liminar para cirurgia de urgência no plantão paulista",
+                category: "Liminares",
+                date: "Esta semana"
               },
               {
-                title: "Direito de pacientes oncológicos a medicamentos importados de alto custo",
-                category: "Alto Custo",
-                date: "28 Fev, 2024"
+                title: "Multa da ANS: Planos que negam assistência estão sujeitos a punição",
+                category: "Defesa do Paciente",
+                date: "Relevante"
               }
             ].map((post, i) => (
               <motion.div 
@@ -265,19 +333,19 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group cursor-pointer flex flex-col h-full bg-white rounded-2xl shadow-elegant overflow-hidden hover:-translate-y-2 transition-transform duration-300 border border-gray-100"
+                className="group cursor-pointer flex flex-col h-full bg-white rounded-2xl shadow-sm hover:shadow-elegant overflow-hidden hover:-translate-y-2 transition-all duration-300 border border-gold/10"
               >
                 <div className="p-8 flex flex-col h-full">
-                  <div className="flex text-xs items-center gap-3 mb-4 text-gray-400 font-medium tracking-wide">
-                    <span className="text-accent">{post.category}</span>
+                  <div className="flex text-xs items-center gap-3 mb-6 text-gray-500 font-bold tracking-wider uppercase">
+                    <span className="text-gold px-3 py-1 bg-gold/10 rounded-full">{post.category}</span>
                     <span>•</span>
                     <span>{post.date}</span>
                   </div>
-                  <h3 className="text-xl font-serif font-bold group-hover:text-amber-600 transition-colors mb-6 leading-snug text-primary">
+                  <h3 className="text-xl font-serif font-bold group-hover:text-gold-dk transition-colors mb-6 leading-snug text-primary">
                     {post.title}
                   </h3>
-                  <Link to="/blog/example" className="text-sm font-bold text-gray-500 flex items-center mt-auto uppercase tracking-wider group-hover:text-primary transition-colors">
-                    Ler Artigo <i className="ri-arrow-right-line ml-1"></i>
+                  <Link to={`/blog/post-${i}`} className="text-sm font-bold text-gray-400 flex items-center mt-auto uppercase tracking-wider group-hover:text-primary transition-colors">
+                    Ler Artigo <i className="ri-arrow-right-line ml-1 text-gold"></i>
                   </Link>
                 </div>
               </motion.div>
@@ -286,26 +354,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA section */}
-      <section className="py-24 bg-accent relative overflow-hidden">
-        <div className="absolute right-0 bottom-0 top-0 w-1/2 bg-amber-600 skew-x-12 -z-0 opacity-20" />
-        <div className="absolute left-0 bottom-0 top-0 w-1/4 bg-amber-400 -skew-x-12 -z-0 opacity-50" />
+      {/* 8. CTA FINAL NAVY */}
+      <section className="py-24 bg-primary text-center relative overflow-hidden">
+        <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-gold-dk skew-x-12 -z-0 opacity-10" />
+        <div className="absolute left-0 bottom-0 top-0 w-1/3 bg-gold-dk -skew-x-12 -z-0 opacity-10" />
         
-        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-            <i className="ri-error-warning-line text-6xl text-white mb-6 inline-block"></i>
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-              A saúde da sua família teve cobertura negada?
+            <div className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8 text-gold">
+              <i className="ri-scales-3-fill text-5xl"></i>
+            </div>
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+              Seu direito à saúde em São Paulo começa aqui.
             </h2>
-            <p className="text-primary/90 text-xl font-medium mb-10 max-w-2xl mx-auto">
-              Nossa equipe está de plantão. Realizamos uma análise preliminar do seu caso de forma ágil e segura.
+            <p className="text-gray-300 text-xl font-light mb-12 max-w-2xl mx-auto">
+              Nossa equipe está preparada para lutar pelo seu acesso à saúde com máxima agilidade no Tribunal de Justiça de São Paulo.
             </p>
-            <Button size="lg" asChild className="h-16 px-10 text-lg bg-primary hover:bg-primary/90 text-white shadow-2xl uppercase tracking-wide">
-              <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                <i className="ri-whatsapp-line mr-2 text-2xl"></i> Enviar Mensagem no WhatsApp
-              </a>
-            </Button>
-            <p className="text-sm text-primary/70 mt-6 font-medium">Atendimento presencial em Curitiba ou totalmente online para todo Brasil.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button size="lg" asChild className="h-16 px-10 text-lg bg-gold hover:bg-gold-dk text-primary shadow-glow uppercase tracking-wide font-bold">
+                <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
+                  <i className="ri-whatsapp-fill mr-2 text-2xl"></i> Enviar Mensagem no WhatsApp
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="h-16 px-10 text-lg border-2 border-white text-white hover:bg-white hover:text-primary transition-colors font-bold uppercase tracking-wide">
+                <Link to="/contato">
+                  Agendar Consulta Gratuita
+                </Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>

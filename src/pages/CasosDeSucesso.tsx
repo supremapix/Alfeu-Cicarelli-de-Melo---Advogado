@@ -10,26 +10,26 @@ export default function CasosDeSucesso() {
 
   const casos = [
     {
-      titulo: "Liberação de Medicamento Oncológico (Zoladex)",
-      descricao: "Paciente diagnosticado com câncer de próstata teve o medicamento negado sob justificativa de uso domiciliar. Ingressamos com liminar e em 48 horas o tratamento foi garantido de forma vitalícia.",
+      titulo: "Liberação de Medicamento Oncológico",
+      descricao: "Paciente diagnosticado com câncer teve o medicamento negado sob justificativa de uso domiciliar. Ingressamos com liminar no TJSP e em poucos dias o tratamento foi garantido de forma contínua.",
       tema: "Alto Custo",
-      tempo: "Liminar em 48h"
+      tempo: "Liminar Rápida"
     },
     {
-      titulo: "Internação em Home Care Pediátrico",
-      descricao: "Plano de saúde limitou sessões de fisioterapia e enfermagem domiciliar para criança com paralisia. Conseguimos na Justiça a manutenção integral do serviço prescrito pelo neuropediatra.",
+      titulo: "Internação em Home Care",
+      descricao: "Plano de saúde limitou sessões de enfermagem domiciliar para paciente idoso em SP. Conseguimos na Justiça Paulista a manutenção integral do serviço prescrito pelo médico.",
       tema: "Home Care",
-      tempo: "Liminar em 72h"
+      tempo: "Liminar Concedida"
     },
     {
-      titulo: "Revisão de Reajuste por Sinistralidade em PME",
-      descricao: "Microempresa recebeu reajuste de 94% no aniversário do contrato. Ação judicial reduziu o reajuste para o índice da ANS (9.63%) e exigiu restituição dos valores pagos a maior.",
+      titulo: "Revisão de Reajuste por Sinistralidade",
+      descricao: "Microempresa de São Paulo recebeu reajuste de 94% no aniversário do contrato. Ação judicial reduziu o reajuste e exigiu restituição judicial dos valores pagos a maior.",
       tema: "Reajuste Abusivo",
       tempo: "Redução Garantida"
     },
     {
-      titulo: "Cirurgia Bariátrica e Reparadora",
-      descricao: "Operadora negou a cirurgia reparadora (remoção de excesso de pele) após bariátrica alegando caráter estético. O Tribunal ordenou a cobertura integral, reconhecendo a natureza reconstrutiva.",
+      titulo: "Cirurgia Negada após Bariátrica",
+      descricao: "Operadora negou a cirurgia reparadora alegando caráter estético. O Tribunal ordenou a cobertura integral, reconhecendo a natureza reconstrutiva a favor de nossa cliente.",
       tema: "Cirurgia",
       tempo: "Cobertura Vital"
     }
@@ -37,13 +37,13 @@ export default function CasosDeSucesso() {
 
   return (
     <>
-      <SEO title="Casos de Sucesso | Cicarelli Advogados" description="Conheça decisões e ações judiciais vitoriosas contra planos de saúde e SUS conduzidas pela nossa equipe." />
-      <div className="pt-32 pb-20 bg-gray-50 min-h-screen">
+      <SEO title="Casos de Sucesso em SP | Cicarelli Advogados" description="Conheça decisões e liminares vitoriosas no TJSP contra planos de saúde promovidas pela nossa equipe paulista." />
+      <div className="pt-32 pb-20 bg-gray-lt min-h-screen">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Casos de Sucesso</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Casos de Sucesso em SP</h1>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Nossa experiência fala através dos resultados. Embora não possamos garantir resultados futuros (vedação ética), apresentamos exemplos práticos de como o judiciário tem interpretado e coibido os abusos das operadoras.
+              Nossa experiência fala através dos resultados. Embora não possamos garantir resultados futuros (vedação ética), apresentamos exemplos práticos de como o judiciário paulista tem interpretado e coibido os abusos das operadoras.
             </p>
           </motion.div>
 
@@ -54,13 +54,13 @@ export default function CasosDeSucesso() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-elegant border border-gray-100 hover:border-accent/40 transition-colors"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-gold/10 hover:border-gold/40 hover:shadow-elegant transition-all"
               >
                 <div className="flex justify-between items-start mb-6">
-                  <span className="bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-md">
+                  <span className="bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-md border border-primary/10">
                     {caso.tema}
                   </span>
-                  <span className="text-accent font-semibold flex items-center text-sm">
+                  <span className="text-gold font-semibold flex items-center text-sm">
                     <i className="ri-time-line mr-1"></i> {caso.tempo}
                   </span>
                 </div>
@@ -70,16 +70,16 @@ export default function CasosDeSucesso() {
             ))}
           </div>
 
-          <div className="bg-primary rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden shadow-elegant">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+          <div className="bg-primary rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden shadow-elegant border border-gold/20">
+             <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
              <div className="relative z-10">
-               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Precisa garantir um direito parecido?</h2>
+               <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-gold">Precisa de liminar similar urgente?</h2>
                <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                 Se o seu caso é similar a algum dos exemplos acima ou você está sofrendo com alguma recusa assistencial, entre em contato.
+                 Se você é de São Paulo e está sofrendo com uma operadora de plano de saúde, nosso plantão jurídico está a postos.
                </p>
-               <Button asChild variant="accent" size="lg" className="h-16 px-10 text-lg font-bold">
+               <Button asChild className="bg-gold hover:bg-gold-dk text-primary h-16 px-10 text-lg font-bold shadow-glow">
                  <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                   <i className="ri-whatsapp-line mr-2 text-2xl"></i> Enviar Caso pelo WhatsApp
+                   <i className="ri-whatsapp-line mr-2 text-2xl"></i> Falar com um Especialista SP
                  </a>
                </Button>
              </div>

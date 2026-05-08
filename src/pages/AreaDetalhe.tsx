@@ -1,7 +1,7 @@
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
-import { Button } from "@/components/ui/button"
+import { LeadForm } from "@/components/LeadForm"
 
 export default function AreaDetalhe({ id: propId }: { id?: string }) {
   const { slug } = useParams<{ slug: string }>()
@@ -19,53 +19,69 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
 
   return (
     <>
-      <SEO title={`Atuação em ${title} | Cicarelli Advogados`} description={`Defendemos pacientes que enfrentam problemas com planos de saúde envolvendo ${title}. Ações rápidas e com pedido de liminar.`} />
+      <SEO title={`Atuação em ${title} SP | Cicarelli Advogados`} description={`Defendemos pacientes paulistas que enfrentam problemas com planos de saúde envolvendo ${title}. Ações rápidas no TJSP e pedidos de liminar.`} />
       
-      <div className="pt-32 pb-20 bg-gray-50 min-h-screen">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-            <div className="mb-6 flex items-center text-sm font-medium text-gray-500">
-               <Link to="/areas-atuacao" className="hover:text-accent transition-colors">Áreas de Atuação</Link>
-               <i className="ri-arrow-right-s-line mx-2"></i>
-               <span className="text-primary">{title}</span>
-            </div>
-
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8 capitalize">{title}</h1>
+      <div className="pt-32 pb-20 bg-gray-lt min-h-screen">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-elegant prose prose-lg max-w-none text-gray-700">
-              <p className="lead text-xl text-gray-800 font-medium border-l-4 border-accent pl-6 mb-8">
-                As abusividades cometidas por planos de saúde demandam conhecimento técnico e atuação cirúrgica por parte do advogado para proteger a saúde e a vida do paciente.
-              </p>
-              
-              <p>
-                Quando o paciente se depara com a necessidade de intervenção jurídica em casos como <strong>{title}</strong>, a agilidade do Poder Judiciário em analisar os pedidos em sede de <em>Tutela de Urgência (Liminar)</em> é o que muitas vezes garante a eficácia do tratamento.
-              </p>
-              
-              <h3>Como o escritório pode ajudar?</h3>
-              <ul>
-                <li>Análise minuciosa do contrato do plano de saúde;</li>
-                <li>Verificação das resoluções normativas mais recentes da ANS;</li>
-                <li>Peticionamento ágil visando a concessão de liminar;</li>
-                <li>Acompanhamento diário das decisões judiciais em caráter de urgência.</li>
-              </ul>
-              
-              <div className="mt-12 bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
-                <i className="ri-information-line text-4xl text-blue-600 mb-4"></i>
-                <h4 className="font-serif text-2xl font-bold text-primary mb-3">Documentos Necessários</h4>
-                <p className="mb-6">Para analisar seu caso de forma célere, você precisará de:</p>
-                <div className="flex flex-wrap justify-center gap-2 mb-6">
-                  <span className="bg-white px-4 py-2 rounded-full border shadow-sm text-sm font-medium">Relatório Médico detalhado</span>
-                  <span className="bg-white px-4 py-2 rounded-full border shadow-sm text-sm font-medium">Negativa por escrito convênio</span>
-                  <span className="bg-white px-4 py-2 rounded-full border shadow-sm text-sm font-medium">Cópia da carteirinha</span>
-                </div>
-                <Button asChild size="lg" className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white shadow-lg">
-                  <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                    <i className="ri-whatsapp-line mr-2 text-xl"></i> Enviar documentos no WhatsApp
-                  </a>
-                </Button>
+            <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="lg:col-span-8">
+              <div className="mb-6 flex items-center text-sm font-medium text-gray-500 uppercase tracking-widest">
+                 <Link to="/areas-de-atuacao" className="hover:text-gold transition-colors">Áreas de Atuação</Link>
+                 <i className="ri-arrow-right-s-line mx-2"></i>
+                 <span className="text-primary">{title}</span>
               </div>
-            </div>
-          </motion.div>
+
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8 capitalize leading-tight">{title} em São Paulo</h1>
+              
+              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10 prose prose-lg max-w-none text-gray-700">
+                <p className="lead text-xl text-primary font-medium border-l-4 border-gold pl-6 mb-8 italic">
+                  As abusividades cometidas por planos de saúde no estado de São Paulo demandam conhecimento técnico profundo do TJSP e atuação cirúrgica por parte do advogado.
+                </p>
+                
+                <p>
+                  Quando o paciente se depara com a necessidade de intervenção jurídica em casos como <strong>{title}</strong>, a agilidade do Poder Judiciário em analisar os pedidos em sede de <em>Tutela de Urgência (Liminar)</em> é o que muitas vezes garante a eficácia do tratamento ou a preservação financeira da família.
+                </p>
+                
+                <h3 className="font-serif text-2xl text-primary">Como nosso escritório atua no seu caso?</h3>
+                <ul className="marker:text-gold">
+                  <li>Análise minuciosa e gratuita do laudo médico e da recusa do plano;</li>
+                  <li>Adequação do pleito às súmulas pacíficas do Tribunal de Justiça de São Paulo (TJSP);</li>
+                  <li>Peticionamento no plantão judiciário (caso haja urgência emergencial);</li>
+                  <li>Despacho direto com juízes e liminares proferidas muitas vezes em 24/48h úteis.</li>
+                </ul>
+
+                <h3 className="font-serif text-2xl text-primary mt-10">Não aceite a primeira resposta do Convênio</h3>
+                <p>
+                  A maciça maioria das recusas por "falta de cobertura no rol da ANS" ou rescisões unilaterais são consideradas ilegais perante a justiça paulista. Se o seu médico assistente recomendou o tratamento, o plano **não pode** substituí-lo.
+                </p>
+                
+                <div className="mt-12 bg-gray-lt p-8 rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center gap-6">
+                  <div className="shrink-0 w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center">
+                     <i className="ri-file-list-3-fill text-3xl"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-xl font-bold text-primary mb-2">Checklist de Documentos (Separe Já)</h4>
+                    <p className="text-sm">Para iniciarmos a ação, precisamos de: <strong>(1) Relatório Médico detalhado, (2) Negativa Formal do Plano e (3) Cópia da Carteirinha e Documentos Pessoais.</strong></p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Sidebar form */}
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-4">
+              <div className="sticky top-32">
+                <div className="bg-primary p-8 rounded-3xl shadow-elegant border border-gold/20">
+                   <div className="text-center mb-6 border-b border-white/10 pb-6">
+                     <h3 className="font-serif text-2xl font-bold text-gold mb-2">Plantão de Urgência SP</h3>
+                     <p className="text-gray-300 text-sm">Nossa equipe está de prontidão para pleitear sua liminar. Fale conosco.</p>
+                   </div>
+                   <LeadForm />
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </>

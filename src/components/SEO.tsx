@@ -8,8 +8,41 @@ interface SEOProps {
 }
 
 export function SEO({ title, description, keywords, canonical }: SEOProps) {
-  const siteTitle = `${title} | Cicarelli Advogados - Direito à Saúde`
+  const isHomePage = title.includes("Home") || title.includes("Inicial");
+  const siteTitle = isHomePage ? "Cicarelli Advogados | Especialista em Direito à Saúde SP" : title;
   
+  const schemaOrgJSONLD = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Cicarelli Advogados",
+    "url": "https://www.cicarelli.adv.br",
+    "telephone": "+554130130001",
+    "email": "contato@cicarelli.adv.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "hasMap": "https://www.google.com/maps/place/São+Paulo,+SP",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/cicarelli.advogados/",
+      "https://www.instagram.com/cicarelli.adv/"
+    ]
+  };
+
   return (
     <Helmet>
       <title>{siteTitle}</title>
@@ -19,6 +52,9 @@ export function SEO({ title, description, keywords, canonical }: SEOProps) {
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
     </Helmet>
   )
 }

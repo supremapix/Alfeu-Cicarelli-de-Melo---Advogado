@@ -7,52 +7,105 @@ export default function FAQ() {
   return (
     <>
       <SEO 
-        title="Dúvidas Frequentes sobre Planos de Saúde" 
-        description="Encontre respostas claras para os principais problemas com convênios médicos: negativas, carência, reembolso e reajustes." 
+        title="Dúvidas Frequentes | Advogado Plano de Saúde SP" 
+        description="Dúvidas comuns sobre planos de saúde em SP: liminares, negativas de cirurgias, reajustes, home care, terapias ABA e muito mais." 
       />
-      <div className="pt-32 pb-20 bg-gray-50 min-h-screen">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Dúvidas Frequentes</h1>
-            <p className="text-gray-600 text-lg">Respostas elaboradas pelo nosso corpo jurídico para esclarecer seus direitos.</p>
+          <div className="text-center mb-16">
+            <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
+              Direito da Saúde
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Dúvidas Frequentes (FAQ)</h1>
+            <p className="text-gray-600 text-lg">Respostas claras, transparentes e embasadas na jurisprudência do TJSP.</p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-elegant">
-            <h2 className="text-2xl font-serif font-bold text-accent mb-6 border-b pb-2">Negativas de Cobertura</h2>
+          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10">
+            {/* Negativas */}
+            <h2 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-gold/20 pb-4">Liminares e Negativas de Cirurgia SP</h2>
             <Accordion type="single" collapsible className="w-full mb-12">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-lg">O plano de saúde negou minha cirurgia e não justificou por escrito. O que fazer?</AccordionTrigger>
-                <AccordionContent className="text-base text-gray-700 leading-relaxed">
-                  <strong>Você deve exigir a negativa formal por escrito.</strong> A Resolução Normativa nº 319 da ANS determina que a operadora é obrigada a fornecer a justificativa da recusa em até 24 horas. Com ela em mãos, juntamente com o pedido médico fundamentado, é possível ingressar com uma <em>ação judicial com pedido de liminar</em>. <Link to="/contato" className="text-blue-600 underline">Fale conosco para analisarmos o caso.</Link>
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  1. O plano negou minha cirurgia dizendo não estar no rol da ANS. O que o TJSP decide sobre isso?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  No Estado de São Paulo, a Súmula 102 do Tribunal de Justiça pacifica este tema: "Havendo expressa indicação médica, é abusiva a negativa de cobertura sob o argumento de não estar no rol da ANS." Portanto, é direito seu obter uma <strong>Liminar na Justiça</strong> obrigando a cobertura do procedimento, mesmo que fora do rol.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-lg">A operadora alega "doença preexistente" para negar tratamento. Está correto?</AccordionTrigger>
-                <AccordionContent className="text-base text-gray-700 leading-relaxed">
-                  <strong>Nem sempre.</strong> Se a operadora não exigiu exame admissional preventivo, ela assumiu o risco e não pode alegar <em>doença preexistente</em> no momento em que você precisa do tratamento (Súmula 105 do TJ-SP). Caso seja uma urgência/emergência, o atendimento deve ser imediato, independentemente de preexistência.
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  2. Quanto tempo demora para sair uma Liminar contra plano de saúde na capital paulista?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Trabalhando em regime de urgência, os juízes de São Paulo costumam analisar pedidos de tutela (liminares) de pacientes em estado grave num prazo de <strong>24h a 48h</strong>.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-med-alto">
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  3. O convênio pode negar medicação de alto custo ou oncológica?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Não. Seja medicamento imunobiológico ou tratamento contra câncer, a jurisprudência proíbe a operadora de eleger o momento em que se dará a cura. Ingressamos com liminar para fornecimento de quimioterapia oral, imunoterapia para autismo e remédios importados quando têm registro na ANVISA.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
 
-            <h2 className="text-2xl font-serif font-bold text-accent mb-6 border-b pb-2">Prazos de Carência</h2>
+            {/* Reajustes */}
+            <h2 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-gold/20 pb-4">Reajuste Abusivo e Cancelamento</h2>
             <Accordion type="single" collapsible className="w-full mb-12">
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-lg">Tive uma emergência médica, mas estou no período de carência. Tenho direito ao atendimento?</AccordionTrigger>
-                <AccordionContent className="text-base text-gray-700 leading-relaxed">
-                  <strong>Sim. Em casos de urgência e emergência, a carência máxima permitida por lei é de 24 horas.</strong> Se a operadora recusar a internação alegando carência de 180 dias, trata-se de uma conduta abusiva, e o paciente tem o direito de exigir a cobertura da internação via judicial. <Link to="/contato" className="text-blue-600 underline">Acione nosso plantão.</Link>
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  4. Recebi um aumento de 100% no plano ao fazer 59 anos. Posso processar?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Sim. É um clássico "reajuste asfixiante" da velhice. A Justiça considera ilegal concentrarem todo o aumento no degrau dos 59 anos. Ingressamos com <strong>Ação Revisional de Mensalidade</strong> para reduzir drasticamente o valor e ainda recuperar o dinheiro pago a mais nos últimos 3 anos.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-reajuste-pj">
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  5. O meu plano PME (CNPJ) aumentou por "Sinistralidade". O que fazer?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Reajustes baseados em alta sinistralidade sem a devida transparência e prestação de contas são nulos. Se você possui até 30 vidas no CNPJ, aplicamos o pool de risco normativo da ANS, o que anula aumentos astronômicos abusivos.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-cancela">
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  6. O plano cancelou o contrato unilateralmente enquanto eu estava internado.
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Isto é um crime contra do consumidor. Se você está em meio a tratamento de doença grave (internação, quimioterapia), independentemente se o contrato for coletivo ou PME, o Superior Tribunal entende que ele NÃO pode ser rescindido até a alta médica. Entre com liminar sob risco de morte (periculum in mora).
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
             
-            <h2 className="text-2xl font-serif font-bold text-accent mb-6 border-b pb-2">Reembolso Médico</h2>
+            {/* Terapias ABA e Home Care*/}
+            <h2 className="text-2xl font-serif font-bold text-gold mb-6 border-b border-gold/20 pb-4">Terapias ABA, Home Care e Erro Médico</h2>
             <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-4">
-                <AccordionTrigger className="text-lg">O plano reembolsou um valor irrisório da minha consulta. Isso é legal?</AccordionTrigger>
-                <AccordionContent className="text-base text-gray-700 leading-relaxed">
-                  <strong>A operadora tem o dever de informar previamente e de forma clara como é feito o cálculo do reembolso.</strong> Fórmulas complexas e inacessíveis são consideradas nulas pela Justiça, e você pode propor uma <em>ação de cobrança de reembolso médico</em> para o pagamento da diferença.
+              <AccordionItem value="item-aba">
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  7. Plano cobre Terapias para Autismo (ABA, Denver, Integração Sensorial)?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  A ANS derrubou o limite de sessões terapêuticas para autistas com CID F84. Se o plano credenciado não disponibilizar as terapias em clínica especializada perto da sua clínica no prazo, a Justiça obriga o plano a custear as terapias integralmente no formato particular.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-homecare">
+                <AccordionTrigger className="text-left font-serif text-lg text-primary hover:text-gold data-[state=open]:text-gold">
+                  8. Plano de Saúde nega "Home Care" e oferece apenas cuidador. O que fazer?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pt-2">
+                  Segundo o TJSP (Súmula 90), havendo expressa indicação médica, é abusiva a negativa de prestação de serviços de enfermagem domiciliar (Home Care) prescrevendo que isso seja considerado "exclusão contratual". Uma liminar resolve esse tipo de questão rapidamente.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+          
+          <div className="mt-12 text-center bg-gray-50 border border-gold/10 p-8 rounded-3xl">
+             <p className="text-gray-700 mb-6 font-medium">Sua dúvida não está aqui? Nossos especialistas em São Paulo respondem via WhatsApp.</p>
+             <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="inline-flex bg-gold hover:bg-gold-dk text-primary font-bold py-3 px-8 rounded-full transition-colors shadow-lg">
+                Falar com Advogado (41) 99958-0015
+             </a>
           </div>
         </div>
       </div>

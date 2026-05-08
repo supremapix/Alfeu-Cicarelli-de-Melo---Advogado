@@ -1,6 +1,6 @@
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { LeadForm } from "@/components/LeadForm"
 
 export default function Contato() {
   const fadeInUp = {
@@ -10,66 +10,68 @@ export default function Contato() {
 
   return (
     <>
-      <SEO title="Fale com nosso Escritório | Contato Cicarelli Advogados" description="Entre em contato com nossos especialistas em Direito da Saúde. Atendimento presencial em Curitiba e online para todo o Brasil." />
+      <SEO title="Plantão de Urgências SP | Contato Cicarelli Advogados" description="Advogado de plantão para liminar contra plano de saúde em São Paulo e região. Fale agora no WhatsApp ou telefone." />
       
-      <div className="pt-32 pb-24 bg-gray-50 min-h-screen">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
         <div className="container mx-auto px-4 max-w-6xl">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">Fale com um Especialista</h1>
+            <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
+              Plantão São Paulo
+            </span>
+            <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">Urgência com o Plano?</h1>
             <p className="text-gray-600 text-lg">
-              Nosso plantão jurídico está pronto para avaliar a validade da recusa do seu plano de saúde de forma sigilosa e assertiva.
+              Você não pode esperar. Nossa equipe realiza a análise pre-processual em poucas horas e pode peticionar seu pedido liminar imediatamente para juízes de SP.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-elegant overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-elegant overflow-hidden border border-gold/10">
             
             {/* Informações de Contato Rápidos */}
-            <div className="bg-primary p-10 md:p-16 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+            <div className="bg-primary p-10 md:p-14 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gold-dk/10 rounded-full blur-3xl pointer-events-none" />
               
-              <h2 className="font-serif text-3xl font-bold mb-8 relative z-10">Opções de Atendimento</h2>
+              <h2 className="font-serif text-3xl font-bold mb-8 relative z-10 text-gold">Fale no WhatsApp SP</h2>
+              <p className="text-gray-300 font-light mb-10 relative z-10">Envie suas negativas e laudos diretamente pelo formulário ao lado para direcionar ao nosso especialista em SP, ou utilize os contatos diretos abaixo.</p>
               
-              <div className="space-y-8 relative z-10">
-                <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                  <div className="h-16 w-16 bg-green-500/20 text-green-400 rounded-2xl flex items-center justify-center mr-6 group-hover:bg-green-500 group-hover:text-white transition-all transform group-hover:scale-110">
+              <div className="space-y-6 relative z-10">
+                <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="flex items-center group bg-navy-light/50 border border-white/5 p-4 rounded-2xl hover:border-gold/30 transition-all">
+                  <div className="h-14 w-14 bg-green-500 text-white rounded-full flex items-center justify-center mr-5 shrink-0 shadow-lg">
                     <i className="ri-whatsapp-fill text-3xl"></i>
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl mb-1 group-hover:text-green-400 transition-colors">Plantão WhatsApp</h3>
-                    <p className="text-gray-400 font-mono text-lg">(41) 99958-0015</p>
+                    <h3 className="font-bold text-sm text-gray-300 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">Plantão WhatsApp</h3>
+                    <p className="text-gold font-bold text-2xl">(41) 99958-0015</p>
                   </div>
                 </a>
 
-                <a href="tel:4130130001" className="flex items-center group">
-                  <div className="h-16 w-16 bg-[#ee7c23]/20 text-[#ee7c23] rounded-2xl flex items-center justify-center mr-6 group-hover:bg-[#ee7c23] group-hover:text-white transition-all transform group-hover:scale-110">
+                <a href="tel:4130130001" className="flex items-center group bg-navy-light/50 border border-white/5 p-4 rounded-2xl hover:border-gold/30 transition-all">
+                  <div className="h-14 w-14 bg-gold text-primary rounded-full flex items-center justify-center mr-5 shrink-0 shadow-lg">
                     <i className="ri-phone-fill text-3xl"></i>
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl mb-1 group-hover:text-[#ee7c23] transition-colors">Telefone Sede</h3>
-                    <p className="text-gray-400 font-mono text-lg">(41) 3013-0001</p>
+                    <h3 className="font-bold text-sm text-gray-300 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">Telefone Principal</h3>
+                    <p className="text-white font-bold text-2xl">(41) 3013-0001</p>
                   </div>
                 </a>
                 
-                <a href="mailto:contato@cicarelli.adv.br" className="flex items-center group">
-                  <div className="h-16 w-16 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mr-6 group-hover:bg-blue-500 group-hover:text-white transition-all transform group-hover:scale-110">
+                <a href="mailto:contato@cicarelli.adv.br" className="flex items-center group bg-navy-light/50 border border-white/5 p-4 rounded-2xl hover:border-gold/30 transition-all">
+                  <div className="h-14 w-14 bg-blue-500 text-white rounded-full flex items-center justify-center mr-5 shrink-0 shadow-lg">
                     <i className="ri-mail-send-fill text-3xl"></i>
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl mb-1 group-hover:text-blue-400 transition-colors">E-mail Comercial</h3>
-                    <p className="text-gray-400 text-lg">contato@cicarelli.adv.br</p>
+                    <h3 className="font-bold text-sm text-gray-300 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">E-mail Comercial</h3>
+                    <p className="text-white font-bold text-lg">contato@cicarelli.adv.br</p>
                   </div>
                 </a>
               </div>
               
               <div className="mt-12 pt-8 border-t border-white/10 relative z-10">
                 <div className="flex items-start">
-                  <i className="ri-map-pin-2-fill text-2xl text-accent mr-4"></i>
+                  <i className="ri-map-pin-2-fill text-2xl text-gold mr-4"></i>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Escritório Matriz - Curitiba/PR</h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      Av. Cândido Ferreira de Abreu, 123<br />
-                      Centro Cívico, CEP 80530-000<br />
-                      Atendimento presencial com hora marcada.
+                    <h3 className="font-bold text-lg mb-2 text-white">Atuação em todo o estado de SP</h3>
+                    <p className="text-gray-400 leading-relaxed text-sm">
+                      Processos 100% digitais tramitando diretamente nas Varas Cíveis e Fazenda Pública do TJSP. Máxima celeridade e conforto para você.
                     </p>
                   </div>
                 </div>
@@ -77,40 +79,16 @@ export default function Contato() {
             </div>
 
             {/* Form */}
-            <div className="p-10 md:p-16">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-2">Envie uma Mensagem</h2>
-              <p className="text-gray-500 mb-8 font-medium">Nossa equipe entrará em contato prontamente.</p>
-              
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">Nome Completo *</label>
-                  <input type="text" id="name" className="w-full h-14 px-4 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all bg-gray-50" placeholder="Digite seu nome" required />
+            <div className="p-10 md:p-14 bg-primary lg:bg-white relative">
+              <div className="lg:hidden absolute inset-0 bg-gradient-hero opacity-95 z-0" />
+              <div className="relative z-10">
+                <h2 className="font-serif text-3xl font-bold text-white lg:text-primary mb-2">Avaliação Gratuita</h2>
+                <p className="text-gray-300 lg:text-gray-500 mb-8 font-medium">Forneça os detalhes rápidos para iniciarmos o atendimento.</p>
+                
+                <div className="bg-navy-light/50 lg:bg-primary p-6 md:p-8 rounded-2xl border border-gold/20 shadow-xl">
+                  <LeadForm />
                 </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-primary mb-2">Telefone / WhatsApp *</label>
-                    <input type="tel" id="phone" className="w-full h-14 px-4 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all bg-gray-50" placeholder="(  ) _____-____" required />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">E-mail</label>
-                    <input type="email" id="email" className="w-full h-14 px-4 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all bg-gray-50" placeholder="seu@email.com" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">Resumo do Caso *</label>
-                  <textarea id="message" rows={5} className="w-full p-4 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all bg-gray-50 resize-none" placeholder="O que o plano negou? Qual a sua situação?" required></textarea>
-                </div>
-                
-                <Button type="submit" size="lg" className="w-full h-16 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl mt-4">
-                  Enviar Mensagem <i className="ri-send-plane-fill ml-2"></i>
-                </Button>
-                
-                <p className="text-xs text-center text-gray-400 mt-4 px-4">
-                  Ao enviar, você concorda com a política de sigilo garantida por lei na relação cliente-advogado. Nenhuma informação será compartilhada.
-                </p>
-              </form>
+              </div>
             </div>
             
           </div>

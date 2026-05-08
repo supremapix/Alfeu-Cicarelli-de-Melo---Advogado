@@ -1,23 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
   
-  --color-primary: #0a0f1a;
-  --color-accent: #fbbf24;
-  --color-bg-light: #f8f9fa;
-  --color-white: #ffffff;
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: hsl(0, 0%, 15%);
+  --color-primary: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  
+  --color-accent: hsl(38, 92%, 50%);
+  --color-amber-400: hsl(38, 92%, 50%);
+  --color-amber-600: hsl(32, 95%, 44%);
+  --color-amber-700: hsl(26, 90%, 37%);
+  --color-amber-800: hsl(22, 82%, 31%);
+  
+  --color-green-600: hsl(142, 71%, 45%);
+  --color-blue-600: hsl(221, 83%, 53%);
+  
+  --color-orange-inst: #ee7c23;
+  --color-blue-link: #0088cc;
 }
 
 @layer utilities {
   .shadow-elegant {
-    box-shadow: 0 10px 40px -10px rgba(10, 15, 26, 0.1);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,.3);
   }
-  
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(251,191,36,.2);
+  }
+  .bg-gradient-hero {
+    background-image: linear-gradient(135deg, var(--color-amber-600), var(--color-amber-700));
+  }
+  .bg-gradient-overlay {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  }
   .animate-marquee {
     animation: marquee 30s linear infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
 
@@ -26,8 +49,25 @@
   100% { transform: translateX(-100%); }
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(251, 191, 36, 0);
+  }
+}
+
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-bg-light);
-  color: var(--color-primary);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }

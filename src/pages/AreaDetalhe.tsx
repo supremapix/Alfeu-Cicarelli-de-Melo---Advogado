@@ -21,8 +21,9 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
     <>
       <SEO title={`Atuação em ${title} SP | Cicarelli Advogados`} description={`Defendemos pacientes paulistas que enfrentam problemas com planos de saúde envolvendo ${title}. Ações rápidas no TJSP e pedidos de liminar.`} />
       
-      <div className="pt-32 pb-20 bg-gray-lt min-h-screen">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <div className="pt-32 pb-20 bg-gray-lt min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="lg:col-span-8">

@@ -10,8 +10,9 @@ export default function FAQ() {
         title="Dúvidas Frequentes | Advogado Plano de Saúde SP" 
         description="Dúvidas comuns sobre planos de saúde em SP: liminares, negativas de cirurgias, reajustes, home care, terapias ABA e muito mais." 
       />
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <div className="text-center mb-16">
             <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
               Direito da Saúde

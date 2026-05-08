@@ -109,6 +109,16 @@ export function Footer() {
             <span>© {new Date().getFullYear()} Cicarelli Advogados SP. Todos os direitos reservados.</span>
           </div>
           
+          <div className="flex items-center">
+            <p className="text-white/35 text-xs flex items-center gap-1">
+              Desenvolvido com <i className="ri-heart-fill text-red-500 animate-pulse" style={{fontSize: '11px'}}></i> por
+              <a href="https://supremasite.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition ml-1 inline-flex items-center gap-1">
+                Suprema Sites Express
+                <img src="https://img.supremamidia.com/suprema-img.png" alt="Suprema" className="h-3.5 inline" />
+              </a>
+            </p>
+          </div>
+
           <div className="flex space-x-6">
             <Link to="/mapa-do-site" className="hover:text-gold transition-colors">Mapa do Site</Link>
             <Link to="/" className="hover:text-gold transition-colors">Aviso Legal</Link>

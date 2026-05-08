@@ -16,8 +16,9 @@ export default function BlogPost() {
   return (
     <>
       <SEO title={`${post.title} | Blog Cicarelli Advogados`} description={post.excerpt} />
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
-        <div className="container mx-auto px-4 max-w-4xl min-h-screen">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-4xl min-h-screen relative z-10">
           
           <Link to="/blog" className="text-gold hover:text-gold-dk font-medium mb-8 inline-flex items-center uppercase tracking-widest text-xs">
             <i className="ri-arrow-left-line mr-2 text-lg"></i> Voltar para o Blog

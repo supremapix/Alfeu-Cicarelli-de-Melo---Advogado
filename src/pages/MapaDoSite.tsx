@@ -13,8 +13,9 @@ export default function MapaDoSite() {
     <>
       <SEO title="Mapa do Site | Cicarelli Advogados" description="Encontre rapidamente a página desejada. Mapa do site do escritório Cicarelli Advogados." />
       
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="mb-12">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Mapa do Site</h1>
             <p className="text-gray-600 text-lg">

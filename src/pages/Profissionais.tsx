@@ -8,8 +8,9 @@ export default function Profissionais() {
         title="Dr. Alfeu Cicarelli e Equipe" 
         description="Conheça a equipe do escritório Cicarelli Advogados, especialistas em Direito da Saúde e defesa de pacientes contra planos de saúde." 
       />
-      <div className="pt-32 pb-20 bg-gray-50 min-h-screen">
-        <div className="container mx-auto px-4 max-w-5xl">
+      <div className="pt-32 pb-20 bg-gray-50 min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-5xl relative z-10">
           <div className="text-center mb-16">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Nossa Equipe</h1>
             <p className="text-gray-600 text-lg">Profissionais dedicados exclusivamente à defesa do direito à saúde.</p>

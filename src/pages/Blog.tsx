@@ -13,8 +13,9 @@ export default function Blog() {
     <>
       <SEO title="Blog Jurídico | Cicarelli Advogados" description="Artigos e novidades sobre Direito à Saúde em São Paulo. Leia sobre liminares contra planos de saúde, negativas, reajustes e SUS." />
       
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
             <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
               Informação Especializada

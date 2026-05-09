@@ -2,6 +2,7 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function AreasDeAtuacao() {
   const fadeInUp = {
@@ -21,17 +22,17 @@ export default function AreasDeAtuacao() {
   return (
     <>
       <SEO title="Áreas de Atuação em SP | Cicarelli Advogados" description="Conheça nossas áreas de atuação em defesa do paciente paulista: liminares urgentes, negativas de cirurgia, home care e reajustes abusivos." />
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+      
+      <HeroSection
+        badge="Especialidades · São Paulo"
+        title="Como protegemos os seus Direitos em São Paulo"
+        subtitle="Em um momento de fragilidade, nossa atuação especializada no Tribunal de Justiça de São Paulo (TJSP) garante as liminares ágeis necessárias para proteger sua saúde."
+        height="small"
+      />
+
+      <div className="py-24 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-gold uppercase tracking-widest font-semibold text-sm mb-4 block">Especialidades</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Como protegemos os seus Direitos em São Paulo</h1>
-            <p className="text-gray-600 text-lg">
-              Em um momento de fragilidade, nossa atuação especializada no Tribunal de Justiça de São Paulo (TJSP) garante as liminares ágeis necessárias para proteger sua saúde.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {areas.map((area, index) => (
               <motion.div 

@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { getPostBySlug } from "@/data/blog"
 import Markdown from "react-markdown"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
@@ -16,7 +17,23 @@ export default function BlogPost() {
   return (
     <>
       <SEO title={`${post.title} | Blog Cicarelli Advogados`} description={post.excerpt} />
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+      
+      <HeroSection
+        badge={post.tag}
+        title={post.title}
+        height="medium"
+      >
+        <div className="flex flex-wrap items-center text-sm text-gray-300 gap-6 mt-4 opacity-90">
+          <span className="flex items-center">
+            <i className="ri-calendar-line mr-2 text-gold"></i> {post.date.replace('Acesso em ', '')}
+          </span>
+          <span className="flex items-center">
+            <i className="ri-user-line mr-2 text-gold"></i> {post.author}
+          </span>
+        </div>
+      </HeroSection>
+
+      <div className="py-24 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-4xl min-h-screen relative z-10">
           
@@ -25,18 +42,7 @@ export default function BlogPost() {
           </Link>
           
           <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}}>
-            <span className="text-gold uppercase tracking-widest font-semibold text-xs mb-4 block">{post.tag}</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold text-primary mb-6 leading-tight">{post.title}</h1>
             
-            <div className="flex items-center text-sm text-gray-500 mb-10 pb-6 border-b border-gold/20">
-              <span className="flex items-center mr-6">
-                <i className="ri-calendar-line mr-2 text-gold"></i> {post.date.replace('Acesso em ', '')}
-              </span>
-              <span className="flex items-center">
-                <i className="ri-user-line mr-2 text-gold"></i> {post.author}
-              </span>
-            </div>
-
             <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10">
               <div className="prose prose-lg max-w-none text-gray-800 prose-headings:font-serif prose-headings:text-primary prose-a:text-gold hover:prose-a:text-gold-dk prose-strong:text-primary marker:text-gold">
                 <Markdown>{post.content}</Markdown>

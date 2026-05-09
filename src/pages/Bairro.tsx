@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AlertTriangle, Home, Pill, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HeroSection } from "@/components/HeroSection";
 
 export default function Bairro() {
   const { slug } = useParams<{ slug: string }>();
@@ -39,49 +40,20 @@ export default function Bairro() {
       />
 
       {/* 1. HERO LOCALIZADO */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-primary text-white">
-        <div className="absolute inset-0 bg-gradient-hero opacity-90 z-0"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
-            initial="hidden" 
-            animate="visible" 
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
-            }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <motion.div variants={fadeInUp} className="mb-6">
-              <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase">
-                Atendimento em {bairro.nome} · São Paulo
-              </span>
-            </motion.div>
-            
-            <motion.h1 variants={fadeInUp} className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Advogado Especialista em Plano de Saúde em {bairro.nome}
-            </motion.h1>
-            
-            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-              O plano de saúde negou seu tratamento em {bairro.nome}? A Cicarelli Advogados garante seus direitos. Consulta gratuita e análise rápida.
-            </motion.p>
-            
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" className="w-full sm:w-auto h-14 px-8 bg-gold hover:bg-gold-dk text-primary font-bold text-lg rounded-xl transition-all shadow-glow">
-                <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                  <i className="ri-whatsapp-line mr-2 text-2xl"></i> Consulta Gratuita
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 border-2 border-white text-white hover:bg-white hover:text-primary font-bold text-lg rounded-xl transition-all">
-                <a href="tel:4130130001">
-                  <i className="ri-phone-line mr-2 text-2xl"></i> Ligar Agora
-                </a>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      <HeroSection
+        badge={`Atendimento em ${bairro.nome} · São Paulo`}
+        title={`Advogado Especialista em Plano de Saúde em ${bairro.nome}`}
+        subtitle={`O plano de saúde negou seu tratamento em ${bairro.nome}? A Cicarelli Advogados garante seus direitos. Consulta gratuita e análise rápida.`}
+        ctaPrimary={{
+          label: "Consulta Gratuita",
+          href: "https://wa.me/5541999580015"
+        }}
+        ctaSecondary={{
+          label: "Ligar Agora",
+          href: "tel:4130130001"
+        }}
+        height="large"
+      />
 
       {/* 2. BLOCO DE URGÊNCIA */}
       <section className="py-16 bg-gray-lt border-b border-gray-200">

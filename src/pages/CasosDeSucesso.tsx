@@ -1,6 +1,7 @@
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function CasosDeSucesso() {
   const fadeInUp = {
@@ -38,15 +39,17 @@ export default function CasosDeSucesso() {
   return (
     <>
       <SEO title="Casos de Sucesso em SP | Cicarelli Advogados" description="Conheça decisões e liminares vitoriosas no TJSP contra planos de saúde promovidas pela nossa equipe paulista." />
-      <div className="pt-32 pb-20 bg-gray-lt min-h-screen relative overflow-hidden">
+      
+      <HeroSection
+        badge="Nossas Vitórias"
+        title="Casos de Sucesso em SP"
+        subtitle="Nossa experiência fala através dos resultados. Embora não possamos garantir resultados futuros (vedação ética), apresentamos exemplos práticos de como o judiciário paulista tem interpretado e coibido os abusos das operadoras."
+        height="small"
+      />
+
+      <div className="py-20 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Casos de Sucesso em SP</h1>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Nossa experiência fala através dos resultados. Embora não possamos garantir resultados futuros (vedação ética), apresentamos exemplos práticos de como o judiciário paulista tem interpretado e coibido os abusos das operadoras.
-            </p>
-          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {casos.map((caso, index) => (

@@ -2,6 +2,7 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion"
 import { Link } from "react-router-dom"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function FAQ() {
   return (
@@ -10,16 +11,17 @@ export default function FAQ() {
         title="Dúvidas Frequentes | Advogado Plano de Saúde SP" 
         description="Dúvidas comuns sobre planos de saúde em SP: liminares, negativas de cirurgias, reajustes, home care, terapias ABA e muito mais." 
       />
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+      
+      <HeroSection
+        badge="Direito da Saúde"
+        title="Dúvidas Frequentes (FAQ)"
+        subtitle="Respostas claras, transparentes e embasadas na jurisprudência do TJSP."
+        height="small"
+      />
+
+      <div className="py-24 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
-              Direito da Saúde
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Dúvidas Frequentes (FAQ)</h1>
-            <p className="text-gray-600 text-lg">Respostas claras, transparentes e embasadas na jurisprudência do TJSP.</p>
-          </div>
 
           <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10">
             {/* Negativas */}

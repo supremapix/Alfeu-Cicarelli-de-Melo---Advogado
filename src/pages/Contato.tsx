@@ -1,6 +1,7 @@
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { LeadForm } from "@/components/LeadForm"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function Contato() {
   const fadeInUp = {
@@ -12,19 +13,16 @@ export default function Contato() {
     <>
       <SEO title="Plantão de Urgências SP | Contato Cicarelli Advogados" description="Advogado de plantão para liminar contra plano de saúde em São Paulo e região. Fale agora no WhatsApp ou telefone." />
       
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+      <HeroSection
+        badge="Plantão São Paulo"
+        title="Urgência com o Plano?"
+        subtitle="Você não pode esperar. Nossa equipe realiza a análise pré-processual em poucas horas e pode peticionar seu pedido liminar imediatamente para juízes de SP."
+        height="small"
+      />
+
+      <div className="py-24 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
-              Plantão São Paulo
-            </span>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">Urgência com o Plano?</h1>
-            <p className="text-gray-600 text-lg">
-              Você não pode esperar. Nossa equipe realiza a análise pre-processual em poucas horas e pode peticionar seu pedido liminar imediatamente para juízes de SP.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-3xl shadow-elegant overflow-hidden border border-gold/10">
             
             {/* Informações de Contato Rápidos */}

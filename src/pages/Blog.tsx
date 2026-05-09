@@ -2,6 +2,7 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { blogPosts } from "@/data/blog"
+import { HeroSection } from "@/components/HeroSection"
 
 export default function Blog() {
   const fadeInUp = {
@@ -13,18 +14,16 @@ export default function Blog() {
     <>
       <SEO title="Blog Jurídico | Cicarelli Advogados" description="Artigos e novidades sobre Direito à Saúde em São Paulo. Leia sobre liminares contra planos de saúde, negativas, reajustes e SUS." />
       
-      <div className="pt-32 pb-24 bg-gray-lt min-h-screen relative overflow-hidden">
+      <HeroSection
+        badge="Informação Especializada"
+        title="Blog da Saúde SP"
+        subtitle="Entenda de forma clara quais são os seus direitos perante o seu convênio de saúde, em dezenas de artigos elaborados pelos nossos advogados especialistas no direito local do TJSP."
+        height="small"
+      />
+
+      <div className="py-24 bg-gray-lt min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.03] pointer-events-none z-0" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="inline-block py-1.5 px-4 bg-gold/20 border border-gold/50 text-gold rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
-              Informação Especializada
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Blog da Saúde SP</h1>
-            <p className="text-gray-600 text-lg">
-              Entenda de forma clara quais são os seus direitos perante o seu convênio de saúde ou o conselho tutelar, em dezenas de artigos elaborados pelos nossos advogados especialistas no direito local do TJSP.
-            </p>
-          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, index) => (

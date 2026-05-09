@@ -73,8 +73,8 @@ export default function Home() {
 
       {/* 1. HERO SP */}
       <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-gradient-hero opacity-95 z-0" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542472911-3fb364c63bfd?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay opacity-20 z-[0]" />
+        <div className="absolute inset-0 bg-[url('https://www.cicarelli.adv.br/assets/direito-empresarial-828x578.jpg')] bg-cover bg-center opacity-30 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/95 z-0 pointer-events-none" />
         
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="max-w-4xl mx-auto text-center">

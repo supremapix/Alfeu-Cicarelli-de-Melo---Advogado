@@ -48,15 +48,33 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-6">
             <Link to="/areas-de-atuacao" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Áreas de Atuação</Link>
-            <Link to="/profissionais" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Os Advogados</Link>
-            <Link to="/faq" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Dúvidas Freq.</Link>
+            <div className="relative group">
+              <button className="flex items-center text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide py-2">
+                Atendimento SP <i className="ri-arrow-down-s-line ml-1"></i>
+              </button>
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50">
+                <div className="p-2 flex flex-col">
+                  <Link to="/bairro/centro" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Centro</Link>
+                  <Link to="/bairro/pinheiros" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Oeste</Link>
+                  <Link to="/bairro/vila-mariana" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Sul</Link>
+                  <Link to="/bairro/tatuape" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Leste</Link>
+                  <Link to="/bairro/santana" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Norte</Link>
+                  <div className="h-px bg-gray-100 my-1"></div>
+                  <Link to="/mapa-do-site" className="px-4 py-3 text-sm font-bold text-gold hover:bg-gold/10 hover:text-primary rounded-lg transition-colors text-center">Ver Todos os Bairros</Link>
+                </div>
+              </div>
+            </div>
+            <Link to="/profissionais" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Equipe</Link>
+            <Link to="/faq" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Dúvidas FAQ</Link>
             <Link to="/blog" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Blog Saúde</Link>
             
-            <Button asChild className="bg-gold hover:bg-gold-dk text-primary font-bold shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all rounded-lg h-10 px-6">
+            <Link to="/contato" className="text-sm font-bold border-2 border-gold text-gold hover:bg-gold hover:text-primary rounded-lg px-4 py-2 transition-colors tracking-wide ml-2 bg-primary">Contato</Link>
+            
+            <Button asChild className="bg-gold hover:bg-gold-dk text-primary font-bold shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all rounded-lg h-10 px-5 ml-4">
               <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer">
-                Consulta Gratuita
+                <i className="ri-whatsapp-line mr-2 text-lg"></i> Urgência
               </a>
             </Button>
           </nav>
@@ -100,9 +118,23 @@ export function Header() {
           <nav className="flex flex-col space-y-2 mb-8">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Home</Link>
             <Link to="/areas-de-atuacao" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Áreas de Atuação</Link>
+            
+            <div className="flex flex-col border-b border-white/10 pb-2">
+              <span className="flex items-center min-h-[56px] text-xl font-serif font-medium text-gold/80">Atendimento SP</span>
+              <div className="flex flex-col pl-4 space-y-1 mt-1">
+                 <Link to="/bairro/centro" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-white/80 hover:text-white">Advogado Zona Centro</Link>
+                 <Link to="/bairro/pinheiros" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-white/80 hover:text-white">Advogado Zona Oeste</Link>
+                 <Link to="/bairro/vila-mariana" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-white/80 hover:text-white">Advogado Zona Sul</Link>
+                 <Link to="/bairro/tatuape" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-white/80 hover:text-white">Advogado Zona Leste</Link>
+                 <Link to="/bairro/santana" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-white/80 hover:text-white">Advogado Zona Norte</Link>
+                 <Link to="/mapa-do-site" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-gold font-bold">Ver Todos os Bairros</Link>
+              </div>
+            </div>
+
             <Link to="/profissionais" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Profissionais</Link>
             <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Blog da Saúde</Link>
             <Link to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Dúvidas Frequentes</Link>
+            <Link to="/contato" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-bold text-primary bg-gold rounded-xl px-4 mt-2 mb-2">Contato / Plantão</Link>
           </nav>
 
           <div className="mb-8 grid grid-cols-1 gap-4">

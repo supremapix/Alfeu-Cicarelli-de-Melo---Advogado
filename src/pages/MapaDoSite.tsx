@@ -62,14 +62,20 @@ export default function MapaDoSite() {
           </div>
           
           <div className="mt-12 bg-white p-10 rounded-3xl shadow-sm border border-gold/10">
-            <h2 className="font-serif text-2xl font-bold text-primary mb-6 border-b border-gray-100 pb-2 text-gold">Atendimento Local em SP</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-               {bairrosSP.map((bairro) => (
-                  <Link key={bairro.slug} to={`/bairro/${bairro.slug}`} className="text-sm text-gray-500 hover:text-gold transition-colors">
-                     {bairro.nome}
-                  </Link>
-               ))}
-            </div>
+            <h2 className="font-serif text-2xl font-bold text-primary mb-6 border-b border-gray-100 pb-2 text-gold">Atendimento Local em SP por Região</h2>
+            
+            {Array.from(new Set(bairrosSP.map(b => b.zona))).map((zona) => (
+              <div key={zona} className="mb-8 last:mb-0">
+                <h3 className="font-serif text-xl font-bold text-gray-800 mb-4 border-b border-gray-50 pb-2">Zona {zona}</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                  {bairrosSP.filter(b => b.zona === zona).map((bairro) => (
+                    <Link key={bairro.slug} to={`/bairro/${bairro.slug}`} className="text-sm text-gray-500 hover:text-gold transition-colors block py-1">
+                       {bairro.nome}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>

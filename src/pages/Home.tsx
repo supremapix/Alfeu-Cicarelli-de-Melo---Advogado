@@ -140,19 +140,30 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Os planos de saúde negam cobertura com burocracia e tecnicidades. Nós sabemos exatamente como reverter isso — na hora certa.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 relative max-w-5xl mx-auto mt-12"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {/* Linha conectora oculta em mobile, visível em telas grandes */}
+            <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-[1px] bg-gold/30" />
+            
             {[
-              { num: "1️⃣", title: "Você nos conta o problema", desc: "Gratuito, sem compromisso." },
-              { num: "2️⃣", title: "Analisamos em 2h", desc: "Viabilidade jurídica clara e transparente." },
-              { num: "3️⃣", title: "Entramos com liminar", desc: "Prazo médio para resultados: 24 a 48 horas." }
+              { num: "01", title: "Contato Inicial", desc: "Você relata seu caso para nossa equipe. Análise preliminar gratuita e sem compromisso." },
+              { num: "02", title: "Análise em 2h", desc: "Avaliamos a viabilidade jurídica com foco em resultado, de forma clara e transparente." },
+              { num: "03", title: "Ação Imediata", desc: "Distribuímos o pedido de liminar com urgência. A justiça costuma responder entre 24 e 48 horas." }
             ].map((step, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="bg-gray-lt p-8 rounded-2xl border border-gray-200 text-center">
-                <div className="text-4xl mb-4">{step.num}</div>
-                <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.desc}</p>
+              <motion.div key={idx} variants={fadeInUp} className="relative z-10 flex flex-col items-center group">
+                <div className="w-[88px] h-[88px] rounded-full bg-white border border-gold/30 shadow-elegant flex items-center justify-center mb-8 bg-gradient-to-br from-white to-gold/5 group-hover:border-gold transition-colors duration-500">
+                   <span className="font-serif text-3xl font-bold text-gold">{step.num}</span>
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-primary mb-4 text-center group-hover:text-gold transition-colors duration-300">{step.title}</h3>
+                <p className="text-gray-600 text-center leading-relaxed px-4">{step.desc}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
-import { getAllZonas } from "@/data/bairros"
 
 export function Footer() {
-  const zonas = getAllZonas()
-
   return (
     <footer className="bg-primary text-white pt-16 pb-8 border-t-[3px] border-gold">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -47,16 +44,38 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-bold text-xl mb-6 text-gold">Atendimento SP</h4>
             <ul className="space-y-3">
-              {zonas.map(zona => (
-                <li key={zona}>
-                  <Link to={`/advogado-plano-de-saude-sao-paulo`} className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
-                    Advogado Zona {zona}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/bairro/centro" className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
+                  Advogado Zona Centro
+                </Link>
+              </li>
+              <li>
+                <Link to="/bairro/pinheiros" className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
+                  Advogado Zona Oeste
+                </Link>
+              </li>
+              <li>
+                <Link to="/bairro/vila-mariana" className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
+                  Advogado Zona Sul
+                </Link>
+              </li>
+              <li>
+                <Link to="/bairro/tatuape" className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
+                  Advogado Zona Leste
+                </Link>
+              </li>
+              <li>
+                <Link to="/bairro/santana" className="text-gray-300 hover:text-gold transition-colors text-sm flex items-center border-b border-white/5 pb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></span>
+                  Advogado Zona Norte
+                </Link>
+              </li>
               <li className="pt-2">
-                <Link to="/advogado-plano-de-saude-sao-paulo" className="text-gold text-xs font-bold uppercase tracking-widest hover:text-gold-dk transition-colors">
+                <Link to="/mapa-do-site" className="text-gold text-xs font-bold uppercase tracking-widest hover:text-gold-dk transition-colors">
                   Ver todos os bairros <i className="ri-arrow-right-line ml-1"></i>
                 </Link>
               </li>

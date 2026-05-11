@@ -81,7 +81,7 @@ export function Header() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden z-50 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md"
+            className="xl:hidden z-50 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isMobileMenuOpen}
@@ -97,7 +97,7 @@ export function Header() {
     </header>
 
       {/* Mobile Navigation Sheet */}
-      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
+      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} xl:hidden overflow-y-auto`}>
         <div className="pt-24 pb-8 px-6 flex flex-col min-h-screen">
           
           {/* Close Button inside the sheet */}
@@ -108,6 +108,15 @@ export function Header() {
           >
             <i className="ri-close-line text-3xl text-white"></i>
           </button>
+
+          <div className="mb-6 flex flex-col items-center">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex flex-col items-center group">
+              <i className="ri-scales-3-fill text-5xl text-gold group-hover:scale-110 transition-transform mb-2"></i>
+              <span className="font-serif text-3xl font-bold leading-tight text-white tracking-wide">Cicarelli</span>
+              <span className="text-xs uppercase tracking-widest text-gray-300 relative top-[-4px]">Advogados</span>
+              <span className="text-[9px] uppercase tracking-widest text-gold mt-1">Especialistas em Direito da Saúde</span>
+            </Link>
+          </div>
 
           <div className="mb-6 flex justify-center">
              <div className="px-3 py-1 bg-gold/20 border border-gold/40 rounded-full text-gold text-xs font-bold uppercase tracking-widest">

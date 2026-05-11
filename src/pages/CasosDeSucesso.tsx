@@ -2,11 +2,12 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function CasosDeSucesso() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
 
   const casos = [
@@ -90,6 +91,12 @@ export default function CasosDeSucesso() {
           </div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={3} 
+        title="Histórico de Vitórias no TJSP" 
+        altText="Especialista Dr. Alfeu Cicarelli trabalhando com processos vitoriosos contra convênios" 
+      />
     </>
   )
 }

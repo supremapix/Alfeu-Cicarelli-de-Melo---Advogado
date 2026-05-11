@@ -3,11 +3,12 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function AreasDeAtuacao() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
 
   const areas = [
@@ -62,6 +63,12 @@ export default function AreasDeAtuacao() {
           </div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={2} 
+        title="Defesa Especializada em Diversas Frentes" 
+        altText="Dr. Alfeu Cicarelli, advogado especialista em direito da saúde analisando caso" 
+      />
     </>
   )
 }

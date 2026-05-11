@@ -2,11 +2,12 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { LeadForm } from "@/components/LeadForm"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function Contato() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
 
   return (
@@ -93,6 +94,12 @@ export default function Contato() {
           </div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={1} 
+        title="Atendimento Pessoal e Direto" 
+        altText="Advogado de plantão Dr. Alfeu Cicarelli em atendimento" 
+      />
     </>
   )
 }

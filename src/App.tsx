@@ -1,6 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
 import { Layout, PageTransition } from "./components/Layout"
+import { useEffect } from "react"
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+  return null;
+}
 
 // Pages
 import HomePage from "./pages/Home"
@@ -27,6 +36,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Layout>
           <PageTransition>
             <Routes>

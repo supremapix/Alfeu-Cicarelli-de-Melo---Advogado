@@ -1,6 +1,7 @@
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function Profissionais() {
   return (
@@ -29,11 +30,17 @@ export default function Profissionais() {
               className="bg-white rounded-3xl p-8 md:p-12 shadow-elegant flex flex-col md:flex-row gap-12"
             >
               <div className="w-full md:w-1/3 flex flex-col items-center">
-                <img 
-                  src="https://www.cicarelli.adv.br/assets/alfeu-cicarelli-advogados-planos-de-saude-em-curitiba-562x562-D7LACyaF.jpg" 
-                  alt="Dr. Alfeu Cicarelli" 
-                  className="w-full max-w-[300px] h-auto rounded-2xl shadow-md mb-6 object-cover aspect-[3/4]"
-                />
+                <div className="relative w-full aspect-[3/4] mb-6 rounded-2xl overflow-hidden shadow-elegant border border-gold/20">
+                  <img 
+                    src="https://liminares.cicarelli.adv.br/imagens/liminar-planos-de-saude-sp-centro-brasil.png" 
+                    alt="Dr. Alfeu Cicarelli no escritório Cicarelli Advogados atuando em Direito à Saúde" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white font-bold opacity-90 text-sm">
+                    Reunião Estratégica
+                  </div>
+                </div>
                 <div className="flex gap-4">
                   <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gold hover:text-primary transition-colors">
                     <i className="ri-linkedin-fill text-xl"></i>

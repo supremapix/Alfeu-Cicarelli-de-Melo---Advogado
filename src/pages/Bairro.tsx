@@ -7,6 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AlertTriangle, Home, Pill, ShieldAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/HeroSection";
+import { AdvogadoProfile } from "@/components/AdvogadoProfile";
 
 export default function Bairro() {
   const { slug } = useParams<{ slug: string }>();
@@ -282,6 +283,12 @@ export default function Bairro() {
           </Accordion>
         </div>
       </section>
+
+      <AdvogadoProfile 
+        imageIndex={3} 
+        title={`Seu Advogado de Saúde em ${bairro.nome}`} 
+        altText={`Advogado Dr. Alfeu Cicarelli especialista em plano de saúde atendendo pacientes de ${bairro.nome}`} 
+      />
     </>
   );
 }

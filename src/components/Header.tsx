@@ -79,7 +79,7 @@ export function Header() {
     </header>
 
       {/* Mobile Navigation Sheet */}
-      <div className={`fixed inset-0 bg-primary z-50 transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
+      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
         <div className="pt-24 pb-8 px-6 flex flex-col min-h-screen">
           
           {/* Close Button inside the sheet */}

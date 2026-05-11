@@ -2,6 +2,7 @@ import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 import { LeadForm } from "@/components/LeadForm"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { serviceContent } from "@/data/services"
@@ -12,7 +13,7 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
   
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
 
   const content = serviceContent[idToUse] || serviceContent["default"]
@@ -108,6 +109,12 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
           </div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={4} 
+        title={`Especialista na sua Defesa: ${content.title}`} 
+        altText={`Advogado Dr. Alfeu Cicarelli atuando em casos de ${content.title}`} 
+      />
     </>
   )
 }

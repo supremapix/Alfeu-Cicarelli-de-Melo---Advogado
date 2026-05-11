@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 import { getAllZonas, getBairrosByZona, bairrosSP } from "@/data/bairros"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 const services = [
   {
@@ -55,7 +56,7 @@ const services = [
 export default function Home() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
   
   const staggerContainer = {
@@ -421,6 +422,12 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      <AdvogadoProfile 
+        imageIndex={1} 
+        title="Estrategista por trás das Liminares em São Paulo" 
+        altText="Dr. Alfeu Cicarelli trabalhando em processos contra planos de saúde no escritório" 
+      />
     </>
   )
 }

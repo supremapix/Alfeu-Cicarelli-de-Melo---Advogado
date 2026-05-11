@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { bairrosSP } from "@/data/bairros"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function MapaDoSite() {
   const fadeInUp = {
@@ -73,6 +74,12 @@ export default function MapaDoSite() {
 
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={2} 
+        title="Transparência e Foco no Cliente" 
+        altText="Dr. Alfeu Cicarelli advogado de saúde" 
+      />
     </>
   )
 }

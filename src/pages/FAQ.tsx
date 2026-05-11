@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../components/ui/accordion"
 import { Link } from "react-router-dom"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function FAQ() {
   return (
@@ -112,6 +113,12 @@ export default function FAQ() {
           </div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={4} 
+        title="Experiência que Esclarece Dúvidas" 
+        altText="Dr. Alfeu Cicarelli orientando pacientes sobre planos de saúde" 
+      />
     </>
   )
 }

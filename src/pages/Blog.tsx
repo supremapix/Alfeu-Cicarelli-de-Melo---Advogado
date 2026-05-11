@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { blogPosts } from "@/data/blog"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function Blog() {
   const fadeInUp = {
@@ -54,6 +55,12 @@ export default function Blog() {
 
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={4} 
+        title="Autoridade no Direito Médico e da Saúde" 
+        altText="Dr. Alfeu Cicarelli escrevendo artigos jurídicos sobre planos de saúde" 
+      />
     </>
   )
 }

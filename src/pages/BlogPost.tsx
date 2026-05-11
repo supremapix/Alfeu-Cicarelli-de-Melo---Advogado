@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { getPostBySlug } from "@/data/blog"
 import Markdown from "react-markdown"
 import { HeroSection } from "@/components/HeroSection"
+import { AdvogadoProfile } from "@/components/AdvogadoProfile"
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>()
@@ -59,6 +60,12 @@ export default function BlogPost() {
           </motion.div>
         </div>
       </div>
+
+      <AdvogadoProfile 
+        imageIndex={2} 
+        title="Conheça o Autor: Dr. Alfeu Cicarelli" 
+        altText="Advogado Dr. Alfeu Cicarelli trabalhando na defesa de pacientes em SP" 
+      />
     </>
   )
 }

@@ -44,16 +44,15 @@ export function HeroSection({
     <section className={`relative flex items-center pt-32 pb-16 overflow-hidden bg-[#0a0f1a] ${heightClass}`}>
       {/* CAMADA 1 - Imagem de fundo externa */}
       <img
-        src="https://www.cicarelli.adv.br/assets/direito-empresarial-828x578.jpg"
+        src="https://static.vecteezy.com/ti/fotos-gratis/t2/50267529-martelo-de-juiz-com-advogados-de-justica-tendo-reuniao-de-equipe-no-fundo-do-escritorio-de-advocacia-conceitos-de-direito-e-servicos-juridicos-gratis-foto.jpg"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-25"
         loading={height === 'full' ? 'eager' : 'lazy'}
       />
 
-      {/* CAMADA 2 - Overlay duplo */}
-      <div className="absolute inset-0 bg-[#0a0f1a]/80 z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/90 via-[#0a0f1a]/70 to-transparent z-0"></div>
+      {/* CAMADA 2 - Overlay gradiente para garantir leitura do texto à esquerda */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1a]/80 via-[#0a0f1a]/40 to-transparent z-0"></div>
 
       {/* CAMADA 3 - Faixa dourada no topo */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#fbbf24] to-transparent z-10" />

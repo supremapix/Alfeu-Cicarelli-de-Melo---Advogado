@@ -307,15 +307,26 @@ export default function Home() {
       </section>
 
       {/* 6. MARQUEE INFINITO */}
-      <div className="bg-navy-light overflow-hidden py-5 border-y border-gold/10">
-        <div className="text-center mb-4 text-gray-400 text-sm font-medium tracking-widest uppercase">↓ Bairros onde já garantimos tratamentos para nossos clientes ↓</div>
-        <div className="whitespace-nowrap inline-block animate-marquee flex gap-8 items-center">
-          {bairrosSP.concat(bairrosSP).map((b, i) => (
-            <span key={i} className="text-gold/70 font-semibold uppercase tracking-wider text-sm flex items-center">
-              • Advogado Saúde <span className="text-white ml-2">{b.nome}</span>
-            </span>
-          ))}
+      <div className="bg-[#0a0f1a] overflow-hidden py-2.5 border-y border-white/5 relative flex items-center">
+        <div className="absolute left-0 z-10 bg-gradient-to-r from-[#0a0f1a] via-[#0a0f1a]/80 to-transparent w-32 h-full pointer-events-none"></div>
+        
+        <div className="absolute left-4 z-20 hidden md:flex items-center gap-2 bg-[#0a0f1a] shadow-[0_0_10px_rgba(0,0,0,0.5)] px-3 py-1 rounded-full border border-gold/20">
+           <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></div>
+           <span className="text-gold text-[10px] font-bold tracking-widest uppercase">Atendimento Paulista</span>
         </div>
+
+        <div className="flex w-full overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap items-center w-max hover:[animation-play-state:paused]">
+            {bairrosSP.concat(bairrosSP).map((b, i) => (
+              <span key={i} className="text-gold/50 font-medium uppercase tracking-[0.2em] text-[10px] flex items-center shrink-0">
+                <span className="text-white/70 mx-3 hover:text-gold transition-colors cursor-default">{b.nome}</span>
+                <span className="text-gold/30">✦</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="absolute right-0 z-10 bg-gradient-to-l from-[#0a0f1a] via-[#0a0f1a]/80 to-transparent w-32 h-full pointer-events-none"></div>
       </div>
 
       {/* 7. BLOG PREVIEW */}

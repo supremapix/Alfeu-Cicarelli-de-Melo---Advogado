@@ -90,7 +90,7 @@ export default function Home() {
         }}
         ctaSecondary={{
           label: "Ver como funciona ↓",
-          href: "#como-ajudamos"
+          href: "/como-funciona"
         }}
         height="full"
       >

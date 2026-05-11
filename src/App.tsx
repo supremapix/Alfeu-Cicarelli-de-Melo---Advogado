@@ -24,6 +24,7 @@ import Bairro from "./pages/Bairro"
 
 import CasosDeSucesso from "./pages/CasosDeSucesso"
 import MapaDoSite from "./pages/MapaDoSite"
+import ComoFunciona from "./pages/ComoFunciona"
 
 const NotFound = () => (
   <div className="pt-32 container mx-auto px-4 min-h-[60vh] flex flex-col justify-center items-center">
@@ -42,6 +43,7 @@ export default function App() {
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<HomePage />} />
+              <Route path="/como-funciona" element={<ComoFunciona />} />
               <Route path="/areas-de-atuacao" element={<AreasDeAtuacao />} />
               
               {/* Individual Services */}

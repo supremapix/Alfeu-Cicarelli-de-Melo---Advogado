@@ -50,6 +50,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-6">
             <Link to="/areas-de-atuacao" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Áreas de Atuação</Link>
+            <Link to="/como-funciona" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide">Como Funciona</Link>
             <div className="relative group">
               <button className="flex items-center text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide py-2">
                 Atendimento SP <i className="ri-arrow-down-s-line ml-1"></i>
@@ -127,6 +128,7 @@ export function Header() {
           <nav className="flex flex-col space-y-2 mb-8">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Home</Link>
             <Link to="/areas-de-atuacao" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Áreas de Atuação</Link>
+            <Link to="/como-funciona" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center min-h-[56px] text-xl font-serif font-medium text-white border-b border-white/10 pb-2">Como Funciona</Link>
             
             <div className="flex flex-col border-b border-white/10 pb-2">
               <span className="flex items-center min-h-[56px] text-xl font-serif font-medium text-gold/80">Atendimento SP</span>

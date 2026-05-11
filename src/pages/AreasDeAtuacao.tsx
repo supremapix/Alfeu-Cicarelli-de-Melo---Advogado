@@ -17,7 +17,7 @@ export default function AreasDeAtuacao() {
     { id: "medicamentos-alto-custo", title: "Medicamentos Alto Custo", icon: "ri-capsule-fill", desc: "Liberação judicial de remédios oncológicos e imunobiológicos mesmo fora do rol da ANS." },
     { id: "home-care", title: "Home Care / Internação", icon: "ri-home-heart-fill", desc: "Obrigatoriedade de custeio de assistência médica domiciliar para idosos e pacientes acamados." },
     { id: "erro-medico", title: "Erro Médico", icon: "ri-stethoscope-fill", desc: "Indenizações por negligência, imperícia ou imprudência em hospitais do estado de SP." },
-    { id: "autismo-aba", title: "Terapias Autismo (ABA)", icon: "ri-puzzle-2-fill", desc: "Obrigatoriedade de cobertura ilimitada para terapias multidisciplinares em clínicas especializadas." },
+    { id: "autismo-aba", title: "Terapias Autismo (ABA)", icon: "ri-mental-health-fill", desc: "Obrigatoriedade de cobertura ilimitada para terapias multidisciplinares em clínicas especializadas." },
   ]
 
   return (

@@ -5,26 +5,28 @@ interface SEOProps {
   description: string
   keywords?: string
   canonical?: string
+  customSchema?: object
+  ogType?: string
 }
 
-export function SEO({ title, description, keywords, canonical }: SEOProps) {
+export function SEO({ title, description, keywords, canonical, customSchema, ogType = "website" }: SEOProps) {
   const isHomePage = title.includes("Home") || title.includes("Inicial");
-  const siteTitle = isHomePage ? "Cicarelli Advogados | Especialista em Direito à Saúde SP" : title;
+  const siteTitle = isHomePage ? "Cicarelli Sociedade de Advogados | Especialista em Direito da Saúde e Defesa Médica" : title;
   
-  const schemaOrgJSONLD = {
+  const schemaOrgJSONLD = customSchema || {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "name": "Cicarelli Advogados",
+    "name": "Cicarelli Sociedade de Advogados",
     "url": "https://www.cicarelli.adv.br",
-    "telephone": "+554130130001",
+    "telephone": "+5541999580015",
     "email": "contato@cicarelli.adv.br",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
+      "addressLocality": "Curitiba",
+      "addressRegion": "PR",
       "addressCountry": "BR"
     },
-    "hasMap": "https://www.google.com/maps/place/São+Paulo,+SP",
+    "areaServed": "BR",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -51,7 +53,7 @@ export function SEO({ title, description, keywords, canonical }: SEOProps) {
       {canonical && <link rel="canonical" href={canonical} />}
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:image" content="/og-image.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />

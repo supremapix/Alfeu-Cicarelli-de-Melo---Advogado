@@ -13,12 +13,16 @@ export default function Blog() {
 
   return (
     <>
-      <SEO title="Blog Jurídico | Cicarelli Advogados" description="Artigos e novidades sobre Direito à Saúde em São Paulo. Leia sobre liminares contra planos de saúde, negativas, reajustes e SUS." />
+      <SEO 
+        title="Blog Jurídico | Cicarelli Sociedade de Advogados" 
+        description="Artigos sobre Direito da Saúde, negativas de planos de saúde, liminares, reajustes abusivos e defesa médica em Curitiba e todo o Brasil."
+        canonical="https://www.cicarelli.adv.br/blog"
+      />
       
       <HeroSection
         badge="Informação Especializada"
-        title="Blog da Saúde SP"
-        subtitle="Entenda de forma clara quais são os seus direitos perante o seu convênio de saúde, em dezenas de artigos elaborados pelos nossos advogados especialistas no direito local do TJSP."
+        title="Blog do Direito da Saúde e Defesa Médica"
+        subtitle="Entenda de forma clara e aprofundada seus direitos perante operadoras de planos de saúde e as melhores práticas de defesa médica, com artigos elaborados por advogados especialistas."
         height="small"
       />
 

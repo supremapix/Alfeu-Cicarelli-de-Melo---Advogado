@@ -268,8 +268,10 @@ export default function FAQ() {
         badge="Base Jurídica Atualizada · 2025"
         title="Tudo o Que Você Precisa Saber Sobre Seus Direitos no Plano de Saúde"
         subtitle="Respostas claras, baseadas na lei, sem juridiquês. Se sua dúvida não estiver aqui, fale com um advogado — grátis."
-        ctaText="Falar com Advogado →"
-        ctaLink="https://wa.me/5541999580015"
+        ctaPrimary={{
+          label: "Falar com Advogado →",
+          href: "https://wa.me/5541999580015"
+        }}
         height="medium"
       />
 

@@ -19,4 +19,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://www.cicarelli.adv.br/sitemap.xml
+Sitemap: https://sp.cicarelli.adv.br/sitemap.xml

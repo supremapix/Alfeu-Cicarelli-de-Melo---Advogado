@@ -97,41 +97,41 @@ export default function Bairro() {
         </div>
       </section>
 
-      {/* 3. POR QUE CICARELLI */}
+      {/* 3. ATUAÇÃO EM BAIRRO */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-16 text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary font-bold">Por que a Cicarelli em {bairro.nome}?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-primary font-bold">Atuação Jurídica em {bairro.nome}</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mt-6"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-start p-6 bg-gray-lt rounded-2xl">
-              <i className="ri-award-fill text-4xl text-gold mr-6"></i>
+              <i className="ri-scales-3-fill text-4xl text-gold mr-6"></i>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">+20 anos de experiência</h3>
-                <p className="text-gray-600">Sólida atuação apenas em direito da saúde, com milhares de decisões favoráveis.</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Foco em Direito da Saúde</h3>
+                <p className="text-gray-600">Atuação técnica fundamentada na jurisprudência do TJSP e nas resoluções da ANS.</p>
               </div>
             </div>
             <div className="flex items-start p-6 bg-gray-lt rounded-2xl">
-              <i className="ri-pin-distance-fill text-4xl text-gold mr-6"></i>
+              <i className="ri-computer-fill text-4xl text-gold mr-6"></i>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Atuação em todo São Paulo</h3>
-                <p className="text-gray-600">Atendimento 100% digital garantindo agilidade para quem mora em {bairro.nome} e região.</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Atendimento 100% Digital</h3>
+                <p className="text-gray-600">Envio seguro de documentos e acompanhamento processual à distância para moradores de {bairro.nome}.</p>
               </div>
             </div>
             <div className="flex items-start p-6 bg-gray-lt rounded-2xl">
-              <i className="ri-money-dollar-circle-fill text-4xl text-gold mr-6"></i>
+              <i className="ri-shield-check-fill text-4xl text-gold mr-6"></i>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Sem adiantamento de honorários*</h3>
-                <p className="text-gray-600">Em diversas ações liminares, os honorários incidem apenas sobre o êxito ou ao final do processo.</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Transparência e Ética</h3>
+                <p className="text-gray-600">Contrato de honorários formalizado e estrita observância das normas do Estatuto da Advocacia e OAB.</p>
               </div>
             </div>
             <div className="flex items-start p-6 bg-gray-lt rounded-2xl">
-              <i className="ri-timer-flash-fill text-4xl text-gold mr-6"></i>
+              <i className="ri-file-list-3-fill text-4xl text-gold mr-6"></i>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Primeiros resultados em 48h</h3>
-                <p className="text-gray-600">Pedidos de liminar são despachados diretamente com o juiz para decisões urgentes.</p>
+                <h3 className="text-xl font-bold text-primary mb-2">Tutela de Urgência no TJSP</h3>
+                <p className="text-gray-600">Elaboração técnica de pedidos liminares respaldados no art. 300 do CPC e laudos médicos circunstanciados.</p>
               </div>
             </div>
           </div>
@@ -165,35 +165,42 @@ export default function Bairro() {
         </div>
       </section>
 
-      {/* 5. PROVA SOCIAL */}
+      {/* 5. PILARES JURÍDICOS */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
            <div className="mb-16 text-center">
-            <h2 className="font-serif text-3xl md:text-4xl text-primary font-bold">Avaliados e Comprovados</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-primary font-bold">Rigor Jurídico e Compromisso</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mt-6"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-             {[1, 2, 3].map(i => (
-                <div key={i} className="bg-gray-lt p-8 rounded-2xl relative">
-                  <span className="text-gold text-6xl font-serif absolute -top-4 -left-2 opacity-50">"</span>
-                  <p className="text-gray-700 italic relative z-10 mb-6">"Quando meu pai teve a cirurgia negada, estávamos desesperados. O escritório conseguiu uma liminar em menos de dois dias e o plano teve que arcar com tudo."</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mr-3">M</div>
-                    <div>
-                      <p className="font-bold text-primary text-sm">Maria S.</p>
-                      <div className="flex text-gold text-sm"><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i><i className="ri-star-fill"></i></div>
-                    </div>
-                  </div>
-                </div>
-             ))}
-          </div>
-
-          <div className="text-center bg-primary rounded-3xl p-10 text-white shadow-elegant">
-             <motion.div initial={{ scale: 0.9 }} whileInView={{ scale: 1 }} className="inline-block relative">
-               <span className="text-5xl md:text-7xl font-serif font-bold text-gold drop-shadow-lg">312</span>
-               <span className="block text-xl md:text-2xl mt-2 font-light">casos ganhos em SP em 2024</span>
-             </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-lt p-8 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-6 text-2xl">
+                <i className="ri-file-search-line"></i>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-primary mb-3">Análise Individualizada</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Cada caso é analisado detalhadamente à luz do contrato, do laudo médico e da jurisprudência consolidada.
+              </p>
+            </div>
+            <div className="bg-gray-lt p-8 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-6 text-2xl">
+                <i className="ri-scales-3-line"></i>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-primary mb-3">Peticionamento no TJSP</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Ações estruturadas para o sistema e-SAJ paulista, priorizando a fundamentação urgente necessária.
+              </p>
+            </div>
+            <div className="bg-gray-lt p-8 rounded-2xl border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-6 text-2xl">
+                <i className="ri-lock-line"></i>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-primary mb-3">Sigilo e Segurança</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Tratamento rigoroso de informações e prontuários médicos conforme as normas éticas da OAB e LGPD.
+              </p>
+            </div>
           </div>
         </div>
       </section>

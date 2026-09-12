@@ -48,11 +48,11 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-3 2xl:gap-6">
-            <Link to="/areas-de-atuacao" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Áreas de Atuação</Link>
-            <Link to="/como-funciona" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Como Funciona</Link>
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4 2xl:gap-6">
+            <Link to="/areas-de-atuacao" className="text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Áreas de Atuação</Link>
+            <Link to="/como-funciona" className="text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Como Funciona</Link>
             <div className="relative group">
-              <button className="flex items-center text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide py-2 whitespace-nowrap">
+              <button className="flex items-center text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide py-2 whitespace-nowrap">
                 Atendimento SP <i className="ri-arrow-down-s-line ml-1"></i>
               </button>
               <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50">
@@ -67,22 +67,22 @@ export function Header() {
                 </div>
               </div>
             </div>
-            <Link to="/profissionais" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Equipe</Link>
-            <Link to="/faq" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Dúvidas FAQ</Link>
-            <Link to="/blog" className="text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Blog Saúde</Link>
+            <Link to="/profissionais" className="text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Equipe</Link>
+            <Link to="/faq" className="text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Dúvidas FAQ</Link>
+            <Link to="/blog" className="text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide whitespace-nowrap">Blog Saúde</Link>
             
-            <Link to="/contato" className="text-sm font-bold border-2 border-gold text-gold hover:bg-gold hover:text-primary rounded-lg px-3 py-2 2xl:px-4 transition-colors tracking-wide ml-1 2xl:ml-2 bg-primary whitespace-nowrap">Contato</Link>
+            <Link to="/contato" className="text-xs xl:text-sm font-bold border border-gold text-gold hover:bg-gold hover:text-primary rounded-lg px-2.5 py-1.5 xl:px-3 xl:py-2 transition-colors tracking-wide bg-primary whitespace-nowrap">Contato</Link>
             
-            <Button asChild className="bg-gold hover:bg-gold-dk text-primary font-bold shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all rounded-lg h-10 px-4 2xl:px-5 ml-1 2xl:ml-2">
-              <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap">
-                <i className="ri-whatsapp-line mr-1 2xl:mr-2 text-lg"></i> Urgência
+            <Button asChild className="bg-gold hover:bg-gold-dk text-primary font-bold shadow-md hover:shadow-gold/40 transition-all rounded-lg h-8 xl:h-10 px-3 xl:px-4 text-xs xl:text-sm">
+              <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap flex items-center">
+                <i className="ri-whatsapp-line mr-1 text-base xl:text-lg"></i> Falar Agora
               </a>
             </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="xl:hidden z-50 p-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md"
+            className="lg:hidden z-50 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-md"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isMobileMenuOpen}
@@ -98,7 +98,7 @@ export function Header() {
     </header>
 
       {/* Mobile Navigation Sheet */}
-      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} xl:hidden overflow-y-auto`}>
+      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
         <div className="pt-24 pb-8 px-6 flex flex-col min-h-screen">
           
           {/* Close Button inside the sheet */}

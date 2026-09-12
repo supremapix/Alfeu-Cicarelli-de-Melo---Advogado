@@ -16,16 +16,16 @@ export default function ComoFunciona() {
   return (
     <>
       <Helmet>
-        <title>Como Funciona | Atuação Jurídica Contra Planos de Saúde</title>
-        <meta name="description" content="Entenda como funciona o trabalho do escritório Cicarelli Advogados para liminares urgentes contra os convênios na saúde." />
+        <title>Como Funciona | Atuação Jurídica em Direito da Saúde - Cicarelli Advogados</title>
+        <meta name="description" content="Entenda as etapas da atuação jurídica técnica perante o Tribunal de Justiça de São Paulo em ações com pedido de liminar contra operadoras de planos de saúde." />
       </Helmet>
       
       <HeroSection
-        badge="✦ Metodologia Cicarelli Advogados ✦"
-        title="Como Funciona o Nosso Trabalho"
-        subtitle="Entenda as etapas até sua liminar médica"
+        badge="✦ Atuação Jurídica em São Paulo ✦"
+        title="Como Funciona Nossa Atuação"
+        subtitle="Entenda as etapas do procedimento jurídico e dos pedidos de tutela de urgência perante o Judiciário"
         ctaPrimary={{
-          label: "Iniciar Avaliação →",
+          label: "Falar com Advogado →",
           href: "https://wa.me/5541999580015"
         }}
         height="medium"
@@ -40,9 +40,9 @@ export default function ComoFunciona() {
             variants={fadeInUp}
             className="text-center mb-16 max-w-3xl mx-auto"
           >
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Do diagnóstico ao tratamento — garantimos cada etapa</h2>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">Etapas do Procedimento Jurídico</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6" />
-            <p className="text-gray-600 text-lg">Os planos de saúde negam cobertura com burocracia e tecnicidades. Nós sabemos exatamente como reverter isso — na hora certa.</p>
+            <p className="text-gray-600 text-lg">Diante da recusa de cobertura pelo plano de saúde, adotamos rito técnico para demonstrar os requisitos da tutela de urgência.</p>
           </motion.div>
 
           <motion.div 
@@ -56,9 +56,9 @@ export default function ComoFunciona() {
             <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-[1px] bg-gold/30" />
             
             {[
-              { num: "01", title: "Contato Inicial", desc: "Você relata seu caso para nossa equipe. Análise preliminar gratuita e sem compromisso." },
-              { num: "02", title: "Análise em 2h", desc: "Avaliamos a viabilidade jurídica com foco em resultado, de forma clara e transparente." },
-              { num: "03", title: "Ação Imediata", desc: "Distribuímos o pedido de liminar com urgência. A justiça costuma responder entre 24 e 48 horas." }
+              { num: "01", title: "Análise Documental", desc: "Exame detalhado do relatório médico circunstanciado, histórico clínico e negativa formal emitida pela operadora." },
+              { num: "02", title: "Fundamentação Jurídica", desc: "Estruturação dos fundamentos de direito com base nas súmulas do TJSP, jurisprudência do STJ e Código de Defesa do Consumidor." },
+              { num: "03", title: "Distribuição da Ação", desc: "Protocolo eletrônico perante a vara cível competente ou no plantão judiciário estadual para apreciação da tutela de urgência." }
             ].map((step, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="relative z-10 flex flex-col items-center group">
                 <div className="w-[88px] h-[88px] rounded-full bg-white border border-gold/30 shadow-elegant flex items-center justify-center mb-8 bg-gradient-to-br from-white to-gold/5 group-hover:border-gold transition-colors duration-500">
@@ -74,13 +74,13 @@ export default function ComoFunciona() {
 
       <section className="py-24 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-6">Pronto para buscar seus direitos?</h2>
-            <p className="text-gray-600 mb-8 max-w-xl mx-auto">Tire todas as suas dúvidas conosco online e consiga o deferimento do tratamento que você precisa o quanto antes.</p>
+            <h2 className="text-3xl font-serif font-bold text-primary mb-6">Precisa de orientação jurídica?</h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">Nossa equipe está disponível para avaliar os documentos e esclarecer as dúvidas sobre o cabimento da ação judicial.</p>
             <a 
               href="https://wa.me/5541999580015"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gold hover:bg-gold-dk text-primary font-bold rounded-xl transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Falar pelo WhatsApp
+              Falar com Advogado pelo WhatsApp
             </a>
         </div>
       </section>

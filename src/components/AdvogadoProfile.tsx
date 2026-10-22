@@ -53,7 +53,7 @@ export function AdvogadoProfile({ imageIndex = 1, altText, title, description }:
             <div className="flex items-center gap-6">
               <Link to="/profissionais" className="inline-flex flex-col">
                 <span className="font-bold text-primary text-xl">Dr. Alfeu Cicarelli</span>
-                <span className="text-sm font-medium text-gray-500 mt-1">OAB/SP 430.760 | OAB/PR 56.401</span>
+                <span className="text-sm font-medium text-gray-500 mt-1">OAB/SP 331.673 | OAB/PR 49.213</span>
               </Link>
               <div className="h-10 w-px bg-gray-200"></div>
               <Link to="/profissionais" className="text-gold font-bold uppercase tracking-wider text-sm hover:text-gold-dk transition-colors flex items-center group">

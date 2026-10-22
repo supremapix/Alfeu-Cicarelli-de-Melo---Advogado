@@ -35,3 +35,9 @@ Performance: HTML pré-renderizado e arquivos JS divididos; carga JS total ainda
 ## Testes
 
 Resultados finais e commit constam do relatório de entrega. Scripts reproduzíveis no README. Não foram enviados formulários nem mensagens externas; DNS, permissões, credenciais e contas não foram alterados.
+
+## Conferência solicitada do site principal
+
+Em 22/10/2026, foi lido no navegador o HTML renderizado de https://www.cicarelli.adv.br/ e /profissionais, incluindo rodapé e navegação. O perfil identifica Dr. Alfeu Cicarelli, mas não publica inscrição numérica OAB. O bundle público index-BY9AKlHF.js contém um registro alfeu-cicarelli com OAB/PR 12.345, aparentemente placeholder, além de equipe-cicarelli com apenas OAB/PR. Nenhum dos dois pares divergentes do site SP aparece nessa referência. Não há evidência suficiente para atribuir 430.760/SP e 56.401/PR a outro profissional, nem para certificar 331.673/SP e 49.213/PR. Os números não foram alterados; segue necessária confirmação documental do escritório.
+
+A referência confirma telefone (41) 3013-0001, WhatsApp (41) 99958-0015, e-mail contato@cicarelli.adv.br e endereço em Curitiba (Rua José Risseto, 424, Casa 01, Santa Felicidade, CEP 82015-010). O site SP já informa apenas Curitiba como sede e não ganhou endereço presencial em São Paulo. O link genérico linkedin.com do perfil SP foi corrigido para o link institucional publicado no site principal: https://www.linkedin.com/company/cicarelli-advogados. Adicionados nomes acessíveis aos links de ícone de LinkedIn e e-mail. O domínio principal permaneceu somente leitura.

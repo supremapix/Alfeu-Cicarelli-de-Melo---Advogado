@@ -42,10 +42,10 @@ export default function Profissionais() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gold hover:text-primary transition-colors">
+                  <a href="https://www.linkedin.com/company/cicarelli-advogados" aria-label="Cicarelli Advogados no LinkedIn" target="_blank" rel="noopener noreferrer" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gold hover:text-primary transition-colors">
                     <i className="ri-linkedin-fill text-xl"></i>
                   </a>
-                  <a href="mailto:contato@cicarelli.adv.br" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gold hover:text-primary transition-colors">
+                  <a href="mailto:contato@cicarelli.adv.br" aria-label="Enviar e-mail ao escritório" className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gold hover:text-primary transition-colors">
                     <i className="ri-mail-line text-xl"></i>
                   </a>
                 </div>

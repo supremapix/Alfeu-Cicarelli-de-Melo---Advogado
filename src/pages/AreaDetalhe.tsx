@@ -1,3 +1,4 @@
+import NotFound from './NotFound';
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Link, useParams } from "react-router-dom"
@@ -16,7 +17,8 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   }
 
-  const content = serviceContent[idToUse] || serviceContent["default"]
+  const content = serviceContent[idToUse];
+  if (!content) return <NotFound />;
 
   return (
     <>
@@ -34,7 +36,7 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="lg:col-span-8">
+            <motion.div initial={false} whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="lg:col-span-8">
               <div className="mb-6 flex items-center text-sm font-medium text-gray-500 uppercase tracking-widest">
                  <Link to="/areas-de-atuacao" className="hover:text-gold transition-colors">Áreas de Atuação</Link>
                  <i className="ri-arrow-right-s-line mx-2"></i>
@@ -53,7 +55,7 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
                 <h3 className="font-serif text-2xl text-primary mt-12 mb-6">Como a Cicarelli Advogados Resolve</h3>
                 <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-8">
                   <ul className="space-y-4 marker:text-gold list-disc pl-6">
-                    <li><strong>Análise Tática Gratuita:</strong> Estudamos seu prontuário e a negativa (em até 2h úteis).</li>
+                    <li><strong>Análise dos documentos:</strong> Examinamos o relato e a documentação apresentada.</li>
                     <li><strong>Pedido de Liminar no TJSP:</strong> Peticionamos com pedido de tutela de urgência. Em casos graves, direto no plantão judiciário.</li>
                     <li><strong>Cumprimento da Ordem:</strong> Acompanhamos a intimação do plano para garantir que o procedimento seja liberado no hospital indicado.</li>
                   </ul>
@@ -62,7 +64,7 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
                 {/* Bloco 4: Custos */}
                 <h3 className="font-serif text-2xl text-primary mt-12 mb-6">Transparência nas Custas</h3>
                 <p>
-                  A incerteza financeira não deve impedir você de buscar seus direitos. Oferecemos <strong>análise de viabilidade gratuita</strong>. Nossos honorários são claros e, em várias teses pacificadas, adotamos o formato de <strong>cobrança apenas no êxito (Risco Zero para o cliente)</strong> ou parcelamento facilitado.
+                  As condições de contratação e os honorários são esclarecidos diretamente pelo escritório, conforme o serviço solicitado, em contrato próprio.
                 </p>
 
                 {/* Bloco 5: FAQ Específico */}
@@ -91,14 +93,14 @@ export default function AreaDetalhe({ id: propId }: { id?: string }) {
             </motion.div>
 
             {/* Sidebar CTA / Sticky Nav (optional) */}
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-4 hidden lg:block">
+            <motion.div initial={false} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="lg:col-span-4 hidden lg:block">
               <div className="sticky top-32">
                  <div className="bg-primary text-center p-8 rounded-3xl shadow-elegant border border-gold/20 text-white">
                    <div className="w-16 h-16 bg-gold/20 text-gold rounded-full flex items-center justify-center mx-auto mb-6">
                       <i className="ri-whatsapp-fill text-3xl"></i>
                    </div>
                    <h3 className="font-serif text-2xl font-bold mb-4">Fale agora com o Advogado</h3>
-                   <p className="text-gray-300 mb-8 text-sm">Não aceite respostas automáticas do seu plano. Avaliamos seu caso gratuitamente pelo WhatsApp.</p>
+                   <p className="text-gray-300 mb-8 text-sm">Não aceite respostas automáticas do seu plano. Entre em contato pelo WhatsApp para esclarecer o atendimento.</p>
                    <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="block w-full bg-gold hover:bg-gold-dk text-primary font-bold py-4 rounded-xl uppercase tracking-wider text-sm transition-colors">
                      Iniciar Conversa
                    </a>

@@ -21,7 +21,7 @@ export function AdvogadoProfile({ imageIndex = 1, altText, title, description }:
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="w-full md:w-5/12 relative"
@@ -36,7 +36,7 @@ export function AdvogadoProfile({ imageIndex = 1, altText, title, description }:
             />
           </motion.div>
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="w-full md:w-7/12"
@@ -48,7 +48,7 @@ export function AdvogadoProfile({ imageIndex = 1, altText, title, description }:
               {description || "Especialista na defesa do direito à saúde, atua na linha de frente combatendo as abusividades dos planos de saúde e garantindo, através de medidas judiciais céleres, que a vida e o bem-estar do paciente sejam colocados em primeiro lugar."}
             </p>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Com mais de 20 anos de experiência e milhares de casos acompanhados perante o Tribunal de Justiça, nossa atuação se destaca pelo comprometimento integral com o cidadão vulnerável perante as grandes operadoras e seguradoras.
+              O escritório oferece atendimento online em questões de Direito da Saúde, com análise individual da documentação e esclarecimento das condições de contratação.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/profissionais" className="inline-flex flex-col">

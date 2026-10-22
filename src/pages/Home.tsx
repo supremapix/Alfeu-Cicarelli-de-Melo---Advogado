@@ -1,3 +1,4 @@
+import { blogPosts } from "../data/blog";
 import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -130,7 +131,7 @@ export default function Home() {
       <section id="como-ajudamos" className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div 
-            initial="hidden" 
+            initial={false}
             whileInView="visible" 
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
@@ -144,7 +145,7 @@ export default function Home() {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-12 relative max-w-5xl mx-auto mt-12"
             variants={staggerContainer}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
@@ -171,7 +172,7 @@ export default function Home() {
       <section id="areas-atuacao" className="py-24 bg-gray-lt">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div 
-            initial="hidden" 
+            initial={false}
             whileInView="visible" 
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
@@ -186,7 +187,7 @@ export default function Home() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -229,7 +230,7 @@ export default function Home() {
             {zonas.map((zona, idx) => (
               <motion.div 
                 key={zona}
-                initial="hidden"
+                initial={false}
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
                 variants={fadeInUp}
@@ -343,26 +344,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "TJSP e o custeio de terapias multidisciplinares para autismo (método ABA)",
-                category: "Autismo (TEA)",
-                date: "Informativo"
-              },
-              {
-                title: "Critérios legais da tutela de urgência em cirurgias de emergência no TJSP",
-                category: "Tutela de Urgência",
-                date: "Jurisprudência"
-              },
-              {
-                title: "Reajustes por faixa etária aos 59 anos sob a ótica dos Temas 952 e 1016 do STJ",
-                category: "Reajustes",
-                date: "Doutrina"
-              }
-            ].map((post, i) => (
+            {blogPosts.slice(0, 3).map((post, i) => (
               <motion.div 
                 key={i} 
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
@@ -370,14 +355,14 @@ export default function Home() {
               >
                 <div className="p-8 flex flex-col h-full">
                   <div className="flex text-xs items-center gap-3 mb-6 text-gray-500 font-bold tracking-wider uppercase">
-                    <span className="text-gold px-3 py-1 bg-gold/10 rounded-full">{post.category}</span>
+                    <span className="text-gold px-3 py-1 bg-gold/10 rounded-full">{post.tag}</span>
                     <span>•</span>
                     <span>{post.date}</span>
                   </div>
                   <h3 className="text-xl font-serif font-bold group-hover:text-gold-dk transition-colors mb-6 leading-snug text-primary">
                     {post.title}
                   </h3>
-                  <Link to="/blog" className="text-sm font-bold text-gray-400 flex items-center mt-auto uppercase tracking-wider group-hover:text-primary transition-colors">
+                  <Link to={`/blog/${post.slug}`} className="text-sm font-bold text-gray-400 flex items-center mt-auto uppercase tracking-wider group-hover:text-primary transition-colors">
                     Ler Artigos <i className="ri-arrow-right-line ml-1 text-gold"></i>
                   </Link>
                 </div>
@@ -393,7 +378,7 @@ export default function Home() {
         <div className="absolute left-0 bottom-0 top-0 w-1/3 bg-gold-dk -skew-x-12 -z-0 opacity-10" />
         
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+          <motion.div initial={false}whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
             <div className="w-20 h-20 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8 text-gold">
               <i className="ri-scales-3-line text-4xl"></i>
             </div>

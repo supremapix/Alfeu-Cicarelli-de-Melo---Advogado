@@ -20,7 +20,7 @@ export function FloatingButtons() {
       {/* WhatsApp Button */}
       <div className="group relative flex items-center">
         <span className="absolute right-16 opacity-0 group-hover:opacity-100 transition-opacity bg-green-600 text-white text-xs font-bold py-1 px-3 rounded shadow-sm whitespace-nowrap pointer-events-none">
-          Consulta Gratuita
+          Solicitar atendimento
         </span>
         <a 
           href="https://wa.me/5541999580015" 

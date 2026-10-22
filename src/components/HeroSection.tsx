@@ -62,7 +62,7 @@ export function HeroSection({
         <div className={`grid grid-cols-1 ${showForm ? 'lg:grid-cols-12 gap-12' : 'max-w-4xl'} items-center`}>
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className={showForm ? 'lg:col-span-6' : ''}
@@ -109,7 +109,7 @@ export function HeroSection({
 
           {showForm && (
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:col-span-6"
@@ -120,7 +120,7 @@ export function HeroSection({
                 
                 <div className="relative z-10">
                   <h3 className="font-serif text-2xl font-bold text-white mb-2">Relate sua situação</h3>
-                  <p className="text-gray-400 mb-6 text-sm">Nossa equipe especialista analisará seu caso gratuitamente.</p>
+                  <p className="text-gray-400 mb-6 text-sm">Entre em contato para esclarecer o formato de atendimento.</p>
                   <LeadForm bairro={bairro} />
                 </div>
               </div>

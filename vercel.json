@@ -1,5 +1,44 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/advogado-plano-de-saude-sao-paulo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/negativa-de-cirurgia",
+      "destination": "/negativa-de-cirurgia",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/reajustes-abusivos",
+      "destination": "/reajustes-abusivos",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/medicamentos-alto-custo",
+      "destination": "/medicamentos-alto-custo",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/home-care",
+      "destination": "/home-care",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/erro-medico",
+      "destination": "/erro-medico",
+      "permanent": true
+    },
+    {
+      "source": "/especialidade/autismo-aba",
+      "destination": "/autismo-aba",
+      "permanent": true
+    }
   ]
 }

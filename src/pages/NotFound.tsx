@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+export default function NotFound() { return <><SEO title="Página não encontrada | Cicarelli Advogados" description="O endereço solicitado não existe. Consulte o mapa do site." noindex /><section className="pt-40 pb-24 px-6 text-center min-h-[60vh]"><h1 className="text-4xl font-serif mb-6">Página não encontrada</h1><p className="mb-6">Confira o endereço ou navegue pelos links abaixo.</p><Link className="underline mr-6" to="/">Página inicial</Link><Link className="underline" to="/mapa-do-site">Mapa do site</Link></section></>; }

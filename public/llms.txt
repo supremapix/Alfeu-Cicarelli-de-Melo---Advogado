@@ -1,34 +1,16 @@
-# Cicarelli Sociedade de Advogados
+# Cicarelli Sociedade de Advogados — atendimento em São Paulo
 
-> Escritório de advocacia sediado em Curitiba/PR, especializado em Direito da Saúde (planos de saúde, SUS, liminares de urgência, medicamentos de alto custo) e Defesa Médica (processos éticos no CRM/CFM e ações cíveis indenizatórias). Atuação jurídica de excelência com mais de 20 anos de tradição, atendimento digital ágil em todo o Paraná e no território nacional.
+Site: https://sp.cicarelli.adv.br
+Sede informada: Curitiba, Paraná. Atendimento digital em São Paulo não indica filial presencial.
+WhatsApp: +55 41 99958-0015. E-mail: contato@cicarelli.adv.br.
 
-## Áreas de Atuação
+## Navegação
+- [Áreas de atuação](https://sp.cicarelli.adv.br/areas-de-atuacao)
+- [Centro de São Paulo](https://sp.cicarelli.adv.br/bairro/centro)
+- [Organização de documentos](https://sp.cicarelli.adv.br/blog/documentos-atendimento-plano-saude)
+- [Canais oficiais de acompanhamento](https://sp.cicarelli.adv.br/blog/protocolo-ans-consulta-processo-tjsp)
+- [Contato](https://sp.cicarelli.adv.br/contato)
+- [Sitemap](https://sp.cicarelli.adv.br/sitemap.xml)
 
-- [Negativa de Cobertura e Cirurgias](https://www.cicarelli.adv.br/negativa-de-cirurgia): Obtenção de liminares urgentes contra recusa de cirurgias, internações, leitos de UTI, próteses e órteses (OPME).
-- [Medicamentos de Alto Custo](https://www.cicarelli.adv.br/medicamentos-alto-custo): Ações judiciais para fornecimento de quimioterápicos, imunoterápicos e remédios de alto custo por planos de saúde e pelo SUS.
-- [Reajustes Abusivos de Planos de Saúde](https://www.cicarelli.adv.br/reajustes-abusivos): Revisão de aumentos abusivos por faixa etária (59 anos) e sinistralidade em planos individuais e coletivos, com recuperação de valores pagos a mais nos últimos 3 anos.
-- [Home Care e Internação Domiciliar](https://www.cicarelli.adv.br/home-care): Garantia judicial de estrutura hospitalar completa em residência (plantão de enfermagem técnica 12h/24h, oxigênio, fisioterapia e nutrição enteral).
-- [Tratamento de Autismo e Terapias ABA](https://www.cicarelli.adv.br/autismo-aba): Cobertura integral e ilimitada de terapias multidisciplinares (método ABA, Denver, fonoaudiologia, TO) para pessoas com Transtorno do Espectro Autista.
-- [Defesa Médica e Direito Médico](https://www.cicarelli.adv.br/erro-medico): Assessoria jurídica para médicos e clínicas em sindicâncias e Processos Ético-Profissionais (PEP) no CRM-PR/CFM e defesa em ações indenizatórias.
-
-## Artigos do Blog
-
-- [Negativa de Cobertura de Plano de Saúde em Curitiba](https://www.cicarelli.adv.br/blog/negativa-cobertura-plano-de-saude-o-que-fazer): O que fazer diante da recusa do convênio, como exigir negativa formal e conseguir liminar em 24-48h.
-- [Plano de Saúde Negou Cirurgia ou Internação?](https://www.cicarelli.adv.br/blog/plano-de-saude-negou-cirurgia-internacao-liminar): Como obter tutela de urgência (liminar) para cirurgias, UTI e materiais cirúrgicos (OPME) no TJPR.
-- [Reembolso Médico Negado ou Pago a Menor](https://www.cicarelli.adv.br/blog/reembolso-medico-negado-pago-a-menor-direitos): Direitos do beneficiário a reembolso integral na falta de rede credenciada e como anular tabelas obscuras.
-- [Rol da ANS é Exemplificativo (Lei 14.454/2022)](https://www.cicarelli.adv.br/blog/rol-ans-exemplificativo-tratamento-fora-da-lista): Por que o plano não pode recusar tratamentos e terapias com eficácia científica fora do rol oficial.
-- [Negativa de Medicamento de Alto Custo pelo Plano de Saúde](https://www.cicarelli.adv.br/blog/negativa-medicamento-alto-custo-plano-de-saude): Regras para fornecimento de remédios oncológicos orais, imunobiológicos e uso off-label.
-- [Home Care Negado pelo Plano de Saúde](https://www.cicarelli.adv.br/blog/home-care-negado-convenio-cobertura-obrigatoria): Quando a internação domiciliar é obrigatória e como anular cláusula de exclusão contratual.
-- [Reajuste Abusivo de Plano de Saúde em Curitiba](https://www.cicarelli.adv.br/blog/reajuste-abusivo-plano-de-saude-individual-coletivo): Critérios do STJ (Temas 952 e 1016), nulidade de aumentos abusivos e restituição de 3 anos de cobrança indevida.
-- [Plano de Saúde e Tratamento de Câncer](https://www.cicarelli.adv.br/blog/plano-de-saude-cancer-tratamento-oncologico-imunoterapia): Direitos de pacientes com câncer a quimioterapia oral, imunoterapia, radioterapia e cirurgias reparadoras.
-- [Cirurgia Bariátrica Negada pelo Plano de Saúde](https://www.cicarelli.adv.br/blog/cirurgia-bariatrica-negada-plano-de-saude-requisitos): Requisitos da ANS para gastroplastia e obrigatoriedade de custeio de cirurgias reparadoras pós-bariátrica (Tema 1069 STJ).
-- [Defesa Médica em Curitiba: Processos Éticos no CRM-PR](https://www.cicarelli.adv.br/blog/defesa-medica-processos-eticos-crm-cfm-sindicancias): Como o advogado especialista atua na defesa preventiva, sindicâncias do CRM-PR e ações cíveis.
-
-## Contato e Localização
-
-- **Site:** https://www.cicarelli.adv.br
-- **Endereço:** Curitiba/PR - Atendimento em todo o Paraná e território nacional
-- **WhatsApp / Plantão:** +55 (41) 99958-0015
-- **E-mail:** contato@cicarelli.adv.br
-- **Horário de Atendimento:** Segunda a Sexta, das 09:00 às 18:00 (Plantão 24h para liminares e urgências)
-- **Mais Detalhes:** Consulte [llms-full.txt](https://www.cicarelli.adv.br/llms-full.txt) para os textos completos das matérias e teses jurídicas.
+Conteúdo informativo. Não substitui análise individual, não garante resultado ou prazo judicial.
+As fontes e datas dos novos guias estão nas páginas correspondentes. Não atribuir ao escritório casos, avaliações ou resultados não documentados.

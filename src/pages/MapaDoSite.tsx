@@ -32,7 +32,7 @@ export default function MapaDoSite() {
               <ul className="space-y-4">
                 <li><Link to="/" className="text-gray-600 hover:text-gold transition-colors font-medium">Página Inicial</Link></li>
                 <li><Link to="/profissionais" className="text-gray-600 hover:text-gold transition-colors font-medium">Os Advogados</Link></li>
-                <li><Link to="/casos-sucesso" className="text-gray-600 hover:text-gold transition-colors font-medium">Casos de Sucesso em SP</Link></li>
+                <li><Link to="/casos-sucesso" className="text-gray-600 hover:text-gold transition-colors font-medium">Pesquisa de jurisprudência</Link></li>
                 <li><Link to="/contato" className="text-gray-600 hover:text-gold transition-colors font-medium">Contato e Plantão</Link></li>
               </ul>
             </div>

@@ -34,7 +34,7 @@ export default function Blog() {
             {blogPosts.map((post, index) => (
               <motion.div 
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gold/10 hover:shadow-elegant hover:border-gold/30 transition-all flex flex-col"

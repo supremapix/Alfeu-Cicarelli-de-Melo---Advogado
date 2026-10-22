@@ -17,7 +17,7 @@ const faqCategories = [
         q: "O plano de saúde pode negar cobertura de cirurgia prescrita pelo meu médico?",
         a: "Não. Quando um procedimento é prescrito por médico e consta no Rol de Procedimentos da ANS (ou fora dele, pois o STJ fixou no Tema 1069 que o Rol é exemplificativo), o plano não pode negar arbitrariamente. A negativa deve ser fundamentada por escrito, indicando a cláusula contratual ou norma que justifica a recusa — obrigação criada pela RN ANS nº 623/2024. Se a justificativa for insuficiente ou ilegal, é possível obter autorização judicial por liminar em 24 a 48 horas.",
         cta: "Minha cirurgia foi negada → Falar com advogado agora",
-        wamsg: "Olá, minha cirurgia foi negada pelo plano. Quero consulta gratuita."
+        wamsg: "Olá, minha cirurgia foi negada pelo plano. Quero atendimento jurídico."
       },
       {
         q: "O plano negou cobertura. Qual é o prazo para responder à minha solicitação?",
@@ -98,7 +98,7 @@ const faqCategories = [
       {
         q: "Posso recuperar valores pagos a mais em reajustes ilegais?",
         a: "Sim. O prazo prescricional para cobrar valores pagos indevidamente é de 3 anos (art. 206, §3º, IV do Código Civil). Isso significa que você pode reclamar os últimos 36 meses de reajustes abusivos, com correção monetária e juros. A ação pode ser movida mesmo que o contrato ainda esteja vigente. Em muitos casos, o valor recuperado compensa com folga os honorários advocatícios.",
-        cta: "Quero calcular quanto posso recuperar → Análise gratuita",
+        cta: "Quero calcular quanto posso recuperar → Análise individual",
         wamsg: "Olá, acredito que paguei mensalidades com reajuste ilegal. Como calculo esses últimos anos?"
       }
     ]
@@ -197,14 +197,14 @@ const faqCategories = [
     items: [
       {
         q: "Quanto custa contratar a Cicarelli Advogados?",
-        a: "A consulta inicial é sempre gratuita e sem compromisso. Para ações judiciais, trabalhamos com honorários de êxito: você só paga se ganharmos. O percentual é acordado previamente e de forma transparente. Não há nenhum custo adiantado. Acreditamos que o acesso à justiça não deve depender da capacidade financeira do cliente.",
-        cta: "Quero a consulta gratuita → Agendar agora",
-        wamsg: "Olá, quero agendar uma consulta gratuita com a Cicarelli Advogados."
+        a: "As condições de atendimento e os honorários devem ser esclarecidos diretamente com o escritório e formalizados em contrato, conforme o serviço solicitado.",
+        cta: "Quero a atendimento jurídico → Agendar agora",
+        wamsg: "Olá, quero agendar uma atendimento jurídico com a Cicarelli Advogados."
       },
       {
         q: "O que é uma medida liminar e como ela funciona em casos de plano de saúde?",
         a: "A liminar é uma decisão judicial provisória e urgente que obriga o plano a liberar o tratamento ANTES do julgamento final da ação. Ela é concedida quando há risco de dano grave e urgência (ex: cirurgia necessária, doença progressiva, tratamento de criança). Nos casos de Direito à Saúde, juízes costumam deferir liminares em 24 a 48 horas. Se o plano descumprir a liminar, fica sujeito a multa diária (astreintes) que pode chegar a R$ 1.000 por dia ou mais, dependendo do caso.",
-        cta: "Quero entender se meu caso cabe liminar → Análise gratuita",
+        cta: "Quero entender se meu caso cabe liminar → Análise individual",
         wamsg: "Olá, desejo conferir a viabilidade de emissão de medida liminar judiciária para o meu caso."
       },
       {
@@ -215,7 +215,7 @@ const faqCategories = [
       },
       {
         q: "Qual é o prazo prescricional para entrar com ação contra o plano?",
-        a: "Depende do tipo de ação:\n• Cobrança de reembolso ou valores pagos a mais: 3 anos (art. 206 CC)\n• Indenização por dano moral: 3 anos\n• Ação para obrigar cobertura de tratamento: imprescritível enquanto houver a necessidade médica\n• Erro médico: 3 anos\nO prazo começa a contar da data em que você teve conhecimento da violação do seu direito. Se você está com dúvida sobre seu prazo, a consulta gratuita esclarece o caso concreto em minutos.",
+        a: "Depende do tipo de ação:\n• Cobrança de reembolso ou valores pagos a mais: 3 anos (art. 206 CC)\n• Indenização por dano moral: 3 anos\n• Ação para obrigar cobertura de tratamento: imprescritível enquanto houver a necessidade médica\n• Erro médico: 3 anos\nO prazo começa a contar da data em que você teve conhecimento da violação do seu direito. Se você está com dúvida sobre seu prazo, a atendimento jurídico esclarece o caso concreto em minutos.",
         cta: "Estou no prazo para entrar com ação? → Verificar agora",
         wamsg: "Olá, quero investigar a prescrição ainda disponível para o meu caso."
       },
@@ -253,21 +253,12 @@ export default function FAQ() {
 
   return (
     <>
-      <Helmet>
-        <title>FAQ: Seus Direitos no Plano de Saúde em SP | Cicarelli Advogados</title>
-        <meta 
-          name="description" 
-          content="Plano negou cobertura? Tire suas dúvidas sobre carência, reajuste, liminar e muito mais. Respostas baseadas na Lei 9.656/98 e RN 623/2024 da ANS. Consulta gratuita com advogado especialista em São Paulo." 
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+      <SEO title="Dúvidas sobre plano de saúde em SP | Cicarelli Advogados" description="Informações gerais sobre planos de saúde, atendimento e acompanhamento jurídico em São Paulo." customSchema={faqSchema} />
 
       <HeroSection
         badge="Base Jurídica Atualizada · 2025"
         title="Tudo o Que Você Precisa Saber Sobre Seus Direitos no Plano de Saúde"
-        subtitle="Respostas claras, baseadas na lei, sem juridiquês. Se sua dúvida não estiver aqui, fale com um advogado — grátis."
+        subtitle="Respostas claras, baseadas na lei, sem juridiquês. Se sua dúvida não estiver aqui, fale com um advogado."
         ctaPrimary={{
           label: "Falar com Advogado →",
           href: "https://wa.me/5541999580015"
@@ -310,7 +301,7 @@ export default function FAQ() {
             {filteredCategories.map(category => (
               <motion.div 
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -359,7 +350,7 @@ export default function FAQ() {
 
           {/* Rodapé Interno */}
           <motion.div 
-            initial={{ opacity: 0 }}
+            initial={false}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="mt-20 text-center bg-white border border-gold/20 p-10 md:p-14 rounded-[2rem] shadow-lg relative overflow-hidden"

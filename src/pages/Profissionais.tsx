@@ -25,7 +25,7 @@ export default function Profissionais() {
           <div className="grid grid-cols-1 gap-12">
             {/* Dr. Alfeu */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               className="bg-white rounded-3xl p-8 md:p-12 shadow-elegant flex flex-col md:flex-row gap-12"
             >
@@ -85,7 +85,7 @@ export default function Profissionais() {
 
             {/* Equipe Cicarelli */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="bg-primary text-white rounded-3xl p-8 md:p-12 shadow-elegant flex flex-col md:flex-row gap-12 items-center border border-gold/20"

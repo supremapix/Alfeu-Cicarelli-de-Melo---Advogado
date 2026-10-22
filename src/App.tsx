@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
+import { BrowserRouter, MemoryRouter, Navigate, Routes, Route, useLocation } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
 import { Layout, PageTransition } from "./components/Layout"
 import { useEffect } from "react"
@@ -26,17 +26,15 @@ import CasosDeSucesso from "./pages/CasosDeSucesso"
 import MapaDoSite from "./pages/MapaDoSite"
 import ComoFunciona from "./pages/ComoFunciona"
 
-const NotFound = () => (
-  <div className="pt-32 container mx-auto px-4 min-h-[60vh] flex flex-col justify-center items-center">
-    <h1 className="text-5xl font-serif text-primary border-b-2 border-accent pb-4 mb-4">404</h1>
-    <h2 className="text-2xl font-serif text-gray-700">Página não encontrada</h2>
-  </div>
-)
 
-export default function App() {
+
+import NotFound from './pages/NotFound';
+import { servicePaths } from './data/site';
+export default function App({ url, helmetContext }: { url?: string; helmetContext?: object } = {}) {
+  const Router = url ? MemoryRouter : BrowserRouter;
   return (
-    <HelmetProvider>
-      <BrowserRouter>
+    <HelmetProvider context={helmetContext}>
+      <Router initialEntries={url ? [url] : undefined}>
         <ScrollToTop />
         <Layout>
           <PageTransition>
@@ -53,7 +51,7 @@ export default function App() {
               <Route path="/home-care" element={<AreaDetalhe id="home-care" />} />
               <Route path="/erro-medico" element={<AreaDetalhe id="erro-medico" />} />
               <Route path="/autismo-aba" element={<AreaDetalhe id="autismo-aba" />} />
-              <Route path="/especialidade/:slug" element={<AreaDetalhe />} />
+              {servicePaths.map(path => <Route key={path} path={'/especialidade/' + path} element={<Navigate to={'/' + path} replace />} />)}
 
               <Route path="/profissionais" element={<Profissionais />} />
               <Route path="/faq" element={<FAQ />} />
@@ -65,13 +63,13 @@ export default function App() {
               
               {/* Dynamic Local SEO */}
               <Route path="/bairro/:slug" element={<Bairro />} />
-              <Route path="/advogado-plano-de-saude-sao-paulo" element={<HomePage />} />
+              <Route path="/advogado-plano-de-saude-sao-paulo" element={<Navigate to="/" replace />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>
         </Layout>
-      </BrowserRouter>
+      </Router>
     </HelmetProvider>
   )
 }

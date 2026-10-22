@@ -17,7 +17,7 @@ export default function Contato() {
       <HeroSection
         badge="Plantão São Paulo"
         title="Urgência com o Plano?"
-        subtitle="Você não pode esperar. Nossa equipe realiza a análise pré-processual em poucas horas e pode peticionar seu pedido liminar imediatamente para juízes de SP."
+        subtitle="Entre em contato para informar o assunto e esclarecer as condições e a disponibilidade de atendimento. A sede fica em Curitiba; o atendimento divulgado para São Paulo é digital."
         height="small"
       />
 
@@ -82,7 +82,7 @@ export default function Contato() {
             <div className="p-10 md:p-14 bg-primary lg:bg-white relative">
               <div className="lg:hidden absolute inset-0 bg-gradient-hero opacity-95 z-0" />
               <div className="relative z-10">
-                <h2 className="font-serif text-3xl font-bold text-white lg:text-primary mb-2">Avaliação Gratuita</h2>
+                <h2 className="font-serif text-3xl font-bold text-white lg:text-primary mb-2">Solicitar atendimento</h2>
                 <p className="text-gray-300 lg:text-gray-500 mb-8 font-medium">Forneça os detalhes rápidos para iniciarmos o atendimento.</p>
                 
                 <div className="bg-navy-light/50 lg:bg-primary p-6 md:p-8 rounded-2xl border border-gold/20 shadow-xl">

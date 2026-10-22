@@ -2,8 +2,8 @@ import React from 'react';
 
 export const serviceContent: Record<string, any> = {
   "negativa-de-cirurgia": {
-    seoTitle: "Cirurgia Negada pelo Plano de Saúde em SP | Liminar Rápida",
-    seoDesc: "O plano negou sua cirurgia? Conseguimos liminar em 24h a 48h para obrigar o custeio em hospitais de São Paulo. Consulta grátis.",
+    seoTitle: "Cirurgia Negada pelo Plano de Saúde em SP | Análise Jurídica",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Negativa de Cirurgia ou Exames",
     heroTitle: "Sua cirurgia foi negada? O plano de saúde errou.",
     heroSubtitle: "Revertemos judicialmente a recusa abusiva e obrigamos a operadora a custear o procedimento integralmente. Liminares concedidas em 24h a 48h.",
@@ -57,8 +57,8 @@ export const serviceContent: Record<string, any> = {
     ]
   },
   "reajustes-abusivos": {
-    seoTitle: "Reajuste Abusivo no Plano de Saúde SP | Reduza sua Mensalidade",
-    seoDesc: "Reduza os reajustes abusivos do seu convênio por faixa etária (59 anos) ou sinistralidade. Ações no TJSP com Risco Zero.",
+    seoTitle: "Reajuste Abusivo no Plano de Saúde SP | Análise de Reajustes",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Reajustes Abusivos na Mensalidade",
     heroTitle: "A mensalidade dobrou? O reajuste pode ser anulado.",
     heroSubtitle: "Aumentos exorbitantes por mudança de faixa etária aos 59 anos ou por 'alta sinistralidade' são derrubados na justiça todos os dias.",
@@ -133,7 +133,7 @@ export const serviceContent: Record<string, any> = {
   },
   "medicamentos-alto-custo": {
     seoTitle: "Liminar para Medicamento de Alto Custo | Advogado Saúde SP",
-    seoDesc: "Obrigamos o plano de saúde a custear remédios importados ou Oncológicos, mesmo fora do rol da ANS. Atendimento especializado em SP.",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Medicamentos de Alto Custo Negados",
     heroTitle: "Não interrompa seu tratamento por recusa do plano.",
     heroSubtitle: "Medicamentos oncológicos, biológicos e off-label têm cobertura obrigatória quando há recomendação médica baseada em evidência científica.",
@@ -185,7 +185,7 @@ export const serviceContent: Record<string, any> = {
   },
   "home-care": {
     seoTitle: "Liminar para Home Care Negado SP | Cicarelli Advogados",
-    seoDesc: "O plano cortou o Home Care do idoso ou acamado? A justiça paulista proíbe esse corte unilateral. Reverta com pedido de urgência 24h.",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Liberação de Home Care (Internação Domiciliar)",
     heroTitle: "Cortaram a internação domiciliar do seu familiar?",
     heroSubtitle: "É crueldade e ilegalidade. Garantimos via liminar enfermeiros, fraldas, fisio e suporte completo 24h em domicílio.",
@@ -236,8 +236,8 @@ export const serviceContent: Record<string, any> = {
     ]
   },
   "erro-medico": {
-    seoTitle: "Advogado Especialista Erro Médico SP | Indenização Justa",
-    seoDesc: "Sofreu sequelas por falha médica, negligência ou infecção hospitalar? Lutamos por Reparação de Danos estéticos, materiais e morais.",
+    seoTitle: "Advogado Especialista Erro Médico SP | Análise de Responsabilidade",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Casos de Erro Médico e Defesa do Paciente",
     heroTitle: "Sofrimento ou sequelas causadas por erro de hospital/médico?",
     heroSubtitle: "A negligência ou imperícia não ficarão impunes. Buscamos justiça integral para você ou sua família nos tribunais com profundo respeito a dor e sigilo total.",
@@ -287,8 +287,8 @@ export const serviceContent: Record<string, any> = {
     ]
   },
   "autismo-aba": {
-    seoTitle: "Liminar Tratamento Autismo ABA | Sem Limite de Sessões",
-    seoDesc: "Seu plano de saúde nega custeio integral do tratamento multidisciplinar TEA e ABA? Garantimentos liminarmente reembolso ou clínicas da rede.",
+    seoTitle: "Liminar Tratamento Autismo ABA | Direito da Saúde",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Cobertura Multidisciplinar e Método ABA (TEA)",
     heroTitle: "Plano de Saúde limitou o tratamento de Autismo?",
     heroSubtitle: "Eles não podem limitar as sessões ou impor métodos falhos. O tratamento multidisciplinar ABA para o Transtorno do Espectro Autista é imposto pelos juízes liminarmente.",
@@ -337,7 +337,7 @@ export const serviceContent: Record<string, any> = {
   },
   "default": {
     seoTitle: "Advogado Plano de Sáude | Especialistas em Liminares SP",
-    seoDesc: "Problemas com seu convênio médico em São Paulo? Revertemos liminarmente a negativas judiciais abusivas por um honorário transparente.",
+    seoDesc: "Informações sobre a atuação em Direito da Saúde e análise de questões com planos de saúde em São Paulo. Atendimento digital, com sede em Curitiba.",
     title: "Especialidade",
     heroTitle: "Derrubamos a Negativa do seu Plano",
     heroSubtitle: "Revertemos judicialmente recusas abusivas e obrigamos a operadora a cumprir com suas obrigações.",

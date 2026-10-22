@@ -1,3 +1,4 @@
+import { guides } from "./guides";
 export interface BlogPost {
   id: string;
   title: string;
@@ -14,6 +15,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...guides,
   {
     id: "1",
     slug: "negativa-cobertura-plano-de-saude-o-que-fazer",

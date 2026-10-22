@@ -1,3 +1,5 @@
+import Centro from './Centro';
+import NotFound from './NotFound';
 import { useParams, Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { LeadForm } from "@/components/LeadForm";
@@ -13,17 +15,8 @@ export default function Bairro() {
   const { slug } = useParams<{ slug: string }>();
   const bairro = getBairroBySlug(slug || '');
   
-  if (!bairro) {
-    return (
-      <div className="min-h-screen pt-32 pb-20 flex flex-col items-center justify-center text-center">
-        <h1 className="text-4xl font-serif text-primary mb-4">Bairro não encontrado</h1>
-        <p className="text-gray-600 mb-8">Não localizamos a região solicitada.</p>
-        <Button asChild variant="accent">
-          <Link to="/">Voltar para Home</Link>
-        </Button>
-      </div>
-    );
-  }
+  if (!bairro) return <NotFound />;
+  if (bairro.slug === "centro") return <Centro />;
 
   const bairrosProximos = getBairrosByZona(bairro.zona).filter(b => b.slug !== bairro.slug).slice(0, 8);
 
@@ -36,7 +29,7 @@ export default function Bairro() {
     <>
       <SEO 
         title={`Advogado Plano de Saúde ${bairro.nome} SP | Cicarelli Advogados`} 
-        description={`Plano de saúde negou cobertura em ${bairro.nome}, São Paulo? A Cicarelli Advogados garante seus direitos. Consulta grátis através do nosso plantão: (41) 99958-0015.`}
+        description={`Plano de saúde negou cobertura em ${bairro.nome}, São Paulo? Conheça os canais de atendimento da Cicarelli Advogados. Contato com o escritório através do nosso plantão: (41) 99958-0015.`}
         keywords={`advogado plano de saúde ${bairro.nome}, negativa cobertura ${bairro.nome}, direito saúde ${bairro.nome} SP, advogado saúde suplementar ${bairro.nome}`}
       />
 
@@ -44,9 +37,9 @@ export default function Bairro() {
       <HeroSection
         badge={`Atendimento em ${bairro.nome} · São Paulo`}
         title={`Advogado Especialista em Plano de Saúde em ${bairro.nome}`}
-        subtitle={`O plano de saúde negou seu tratamento em ${bairro.nome}? A Cicarelli Advogados garante seus direitos. Consulta gratuita e análise rápida.`}
+        subtitle={`O plano de saúde negou seu tratamento em ${bairro.nome}? A Cicarelli Advogados oferece análise individual dos documentos. Atendimento jurídico e análise rápida.`}
         ctaPrimary={{
-          label: "Consulta Gratuita",
+          label: "Solicitar atendimento",
           href: "https://wa.me/5541999580015"
         }}
         ctaSecondary={{
@@ -61,7 +54,7 @@ export default function Bairro() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="font-serif text-3xl md:text-4xl text-primary font-bold mb-4">
-              Seu plano negou cobertura? Você tem direito à liminar em 24h
+              Seu plano negou cobertura? Organize os documentos para análise
             </h2>
             <p className="text-gray-600">Não aceite a recusa do convênio. Atuamos com extrema urgência na região do {bairro.nome}.</p>
           </div>
@@ -211,14 +204,14 @@ export default function Bairro() {
         <div className="container mx-auto px-4 max-w-5xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Fale agora com um advogado de {bairro.nome}</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Atendimento digital para {bairro.nome}</h2>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                 Preencha o formulário abaixo e nossa equipe avaliará se o seu caso tem direito a uma liminar urgente para forçar a autorização pelo plano de saúde.
               </p>
               <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Análise 100% Gratuita</li>
-                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Resposta no WhatsApp no mesmo dia</li>
-                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Atendimento com Sigilo Absoluto</li>
+                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Análise individual dos documentos</li>
+                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Contato pelo WhatsApp</li>
+                <li className="flex items-center text-gray-300"><i className="ri-check-line text-gold text-xl mr-3"></i> Atendimento com sigilo profissional</li>
               </ul>
             </div>
             
@@ -240,7 +233,7 @@ export default function Bairro() {
                   {b.nome}
                 </Link>
               ))}
-              <Link to="/advogado-plano-de-saude-sao-paulo" className="px-4 py-2 bg-primary text-white border border-primary rounded-full text-sm hover:bg-navy-light transition-colors">
+              <Link to="/" className="px-4 py-2 bg-primary text-white border border-primary rounded-full text-sm hover:bg-navy-light transition-colors">
                 Ver todos os bairros
               </Link>
             </div>

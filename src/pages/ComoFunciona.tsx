@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async"
+import { SEO } from "../components/SEO"
 import { motion } from "framer-motion"
 import { HeroSection } from "@/components/HeroSection"
 
@@ -15,10 +15,7 @@ const staggerContainer = {
 export default function ComoFunciona() {
   return (
     <>
-      <Helmet>
-        <title>Como Funciona | Atuação Jurídica em Direito da Saúde - Cicarelli Advogados</title>
-        <meta name="description" content="Entenda as etapas da atuação jurídica técnica perante o Tribunal de Justiça de São Paulo em ações com pedido de liminar contra operadoras de planos de saúde." />
-      </Helmet>
+      <SEO title="Como funciona o atendimento | Cicarelli Advogados" description="Etapas do atendimento jurídico online em questões de planos de saúde: contato, organização dos documentos e análise individual." />
       
       <HeroSection
         badge="✦ Atuação Jurídica em São Paulo ✦"
@@ -34,7 +31,7 @@ export default function ComoFunciona() {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div 
-            initial="hidden" 
+            initial={false}
             whileInView="visible" 
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
@@ -48,7 +45,7 @@ export default function ComoFunciona() {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-12 relative max-w-5xl mx-auto mt-12"
             variants={staggerContainer}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >

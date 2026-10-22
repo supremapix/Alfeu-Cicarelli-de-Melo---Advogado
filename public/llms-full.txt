@@ -1,153 +1,16 @@
-# Cicarelli Sociedade de Advogados — Base Completa de Conhecimento e Artigos Jurídicos
+# Cicarelli Sociedade de Advogados — atendimento em São Paulo
 
-> Base de dados textual integral para sistemas de IA, LLMs e mecanismos de busca inteligentes. Contém informações institucionais, teses jurídicas, legislação aplicável e os 10 artigos completos sobre Direito da Saúde Suplementar e Defesa Médica.
+Site: https://sp.cicarelli.adv.br
+Sede informada: Curitiba, Paraná. Atendimento digital em São Paulo não indica filial presencial.
+WhatsApp: +55 41 99958-0015. E-mail: contato@cicarelli.adv.br.
 
-**Instituição:** Cicarelli Sociedade de Advogados  
-**Sede:** Curitiba - Paraná - Brasil  
-**Especialidade:** Direito da Saúde (Planos de Saúde, SUS, Liminares de Urgência) e Defesa Médica (CRM-PR, CFM, Ações Cíveis)  
-**Website Oficial:** https://www.cicarelli.adv.br  
-**Contato / Plantão de Atendimento:** +55 (41) 99958-0015 | contato@cicarelli.adv.br  
+## Navegação
+- [Áreas de atuação](https://sp.cicarelli.adv.br/areas-de-atuacao)
+- [Centro de São Paulo](https://sp.cicarelli.adv.br/bairro/centro)
+- [Organização de documentos](https://sp.cicarelli.adv.br/blog/documentos-atendimento-plano-saude)
+- [Canais oficiais de acompanhamento](https://sp.cicarelli.adv.br/blog/protocolo-ans-consulta-processo-tjsp)
+- [Contato](https://sp.cicarelli.adv.br/contato)
+- [Sitemap](https://sp.cicarelli.adv.br/sitemap.xml)
 
----
-
-## 1. Perfil Institucional e Áreas de Atuação
-
-A Cicarelli Sociedade de Advogados possui mais de duas décadas de atuação na defesa intransigente de pacientes contra operadoras de planos de saúde e na assessoria jurídica estratégica para médicos e estabelecimentos de saúde.
-
-### Principais Linhas de Ação:
-1. **Liminares de Urgência contra Planos de Saúde:** Ajuizamento de tutela provisória de urgência em 24 a 48 horas para liberação imediata de cirurgias, leitos de UTI, transplantes e internações negadas.
-2. **Fornecimento de Medicamentos de Alto Custo:** Ações para liberação de quimioterápicos orais, imunoterápicos, inibidores e terapias biológicas contra planos de saúde e contra o Estado/União (SUS).
-3. **Revisão de Reajustes Abusivos:** Redução judicial de aumentos abusivos aos 59 anos (faixa etária) e de sinistralidade em planos individuais e coletivos, com ressarcimento dos últimos 36 meses pagos a maior.
-4. **Home Care e Desospitalização:** Obtenção de ordem judicial para internação domiciliar completa com escala de enfermagem técnica 12h/24h, insumos, dietas e aparelhos médicos.
-5. **Autismo / TEA e Terapias Multidisciplinares:** Garantia de cobertura integral e ilimitada do método ABA, fonoaudiologia, terapia ocupacional e psicopedagogia sem limitação de sessões.
-6. **Reembolso Médico Integral:** Ações de cobrança para ressarcimento de 100% de consultas, exames e cirurgias fora da rede credenciada por indisponibilidade de prestadores.
-7. **Defesa Médica e Odontológica:** Defesa técnica em sindicâncias e Processos Ético-Profissionais (PEP) perante o CRM-PR e CFM, além de atuação em ações cíveis indenizatórias por suposto erro médico.
-
----
-
-## 2. Artigos Completos do Blog (Textos Integrais)
-
-### ARTIGO 1: Negativa de Cobertura de Plano de Saúde em Curitiba: O Que Fazer Quando o Convênio Nega Tratamento
-**URL:** https://www.cicarelli.adv.br/blog/negativa-cobertura-plano-de-saude-o-que-fazer  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** A negativa de cobertura por operadoras de planos de saúde em Curitiba e no Paraná é abusiva e passível de anulação judicial imediata. O beneficiário tem o direito legal de exigir a negativa formal por escrito e recorrer à Justiça com pedido de liminar para obter a liberação em até 48 horas. A legislação brasileira (Lei 9.656/98 e CDC) estabelece que a definição do tratamento cabe exclusivamente ao médico assistente.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- O plano pode delimitar doenças cobertas, mas não pode escolher o tratamento prescrito pelo médico assistente.
-- A Súmula 608 do STJ estabelece a aplicação do Código de Defesa do Consumidor aos planos de saúde.
-- Com a Lei Federal nº 14.454/2022, o Rol da ANS passou a ser taxativo mitigado (exemplificativo).
-- O artigo 35-C da Lei 9.656/98 impõe prazo máximo de carência de apenas 24 horas para urgência e emergência.
-- O beneficiário deve solicitar a recusa por escrito (RN 395 ANS), laudo médico detalhado com CID e risco iminente, e ajuizar Ação de Obrigação de Fazer com tutela de urgência.
-
----
-
-### ARTIGO 2: Plano de Saúde Negou Cirurgia ou Internação em Curitiba? Como Conseguir Liminar na Justiça
-**URL:** https://www.cicarelli.adv.br/blog/plano-de-saude-negou-cirurgia-internacao-liminar  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** A recusa de internação hospitalar ou cirurgias de urgência pelos planos de saúde constitui violação contratual grave. O STJ e o TJPR consolidaram que a operadora deve custear internações, leitos de UTI, equipes cirúrgicas e materiais essenciais (OPME). Mediante ação com pedido de liminar, o paciente obtém ordem judicial em 24 a 48 horas sob pena de multa diária.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- A Súmula 302 do STJ veda a limitação temporal de internação hospitalar e UTI.
-- O fornecimento de próteses, órteses e materiais especiais (OPME) é obrigatório quando essencial ao ato cirúrgico coberto.
-- A carência em casos de urgência/emergência é de apenas 24 horas (art. 35-C da Lei 9.656/98 e Súmula 597 STJ).
-- O descumprimento de liminares enseja aplicação de astreintes (multa diária) e bloqueio eletrônico de contas bancárias da operadora (Sisbajud).
-
----
-
-### ARTIGO 3: Reembolso Médico Negado ou Pago a Menor pelo Plano de Saúde: Como Cobrar Seus Direitos em Curitiba
-**URL:** https://www.cicarelli.adv.br/blog/reembolso-medico-negado-pago-a-menor-direitos  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** O reembolso de despesas médico-hospitalares é direito do beneficiário em modalidades de livre escolha e em casos de urgência ou inexistência de profissionais credenciados no município. A Justiça determina que as fórmulas de reembolso devem ser transparentes e, na ausência de prestadores na rede, o reembolso deve ser 100% integral.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- Conforme a RN 566 da ANS, a falta de rede credenciada no município de abrangência obriga a operadora ao reembolso integral dos valores gastos pelo paciente em clínicas particulares.
-- O CDC (art. 6º, III e 51, IV) proíbe fórmulas de cálculo obscuras baseadas em coeficientes internos não explicados previamente.
-- O prazo para o plano pagar o reembolso administrativo é de até 30 dias.
-- O prazo prescricional para ajuizamento de ação de cobrança de despesas médicas é de 3 anos (art. 206, § 3º, IX do Código Civil).
-
----
-
-### ARTIGO 4: Rol da ANS é Exemplificativo (Lei 14.454/2022): Por Que o Plano Não Pode Negar Tratamento Fora da Lista
-**URL:** https://www.cicarelli.adv.br/blog/rol-ans-exemplificativo-tratamento-fora-da-lista  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** A Lei 14.454/2022 consagrou que o Rol da ANS possui caráter exemplificativo (taxativo mitigado). As operadoras não podem negar tratamentos prescritos pelo médico com eficácia comprovada por evidências científicas ou recomendações de órgãos técnicos (CONITEC, FDA, EMA).
-
-**Teses Jurídicas e Conteúdo Principal:**
-- O art. 10, §§ 12 e 13 da Lei 9.656/98 (redação dada pela Lei 14.454/22) estabelece a obrigatoriedade de cobertura para tratamentos com comprovação científica.
-- Procedimentos inovadores comumente liberados: terapias ABA para TEA, testes genéticos (NGS), cirurgias robóticas e radioterapia IMRT.
-- O plano de saúde não tem autorização para substituir a técnica prescrita pelo médico por método obsoleto ou mais barato.
-
----
-
-### ARTIGO 5: Negativa de Medicamento de Alto Custo pelo Plano de Saúde em Curitiba: Como Garantir o Tratamento
-**URL:** https://www.cicarelli.adv.br/blog/negativa-medicamento-alto-custo-plano-de-saude  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** O plano de saúde é obrigado a fornecer medicamentos de alto custo (oncológicos, orais, imunobiológicos ou off-label) que possuam registro na ANVISA e prescrição médica fundamentada. Por meio de tutela de urgência, garante-se a entrega ininterrupta dos fármacos.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- A Lei nº 14.307/2022 impõe fornecimento de antineoplásicos orais e correlatos em até 10 dias após a prescrição.
-- O uso off-label com respaldo em literatura médica internacional é de cobertura obrigatória, cabendo a escolha técnica exclusivamente ao médico assistente.
-- Medicamentos como Pembrolizumabe (Keytruda), Osimertinibe (Tagrisso), Ribociclibe (Kisqali), Dupixent e Spinraza são rotineiramente garantidos por liminares no TJPR.
-
----
-
-### ARTIGO 6: Home Care Negado pelo Plano de Saúde: Quando a Internação Domiciliar é Obrigatória em Curitiba
-**URL:** https://www.cicarelli.adv.br/blog/home-care-negado-convenio-cobertura-obrigatoria  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** A internação domiciliar (home care) é a continuidade do tratamento hospitalar na residência. Cláusulas contratuais que excluem o home care são nulas de pleno direito pelo STJ. Havendo indicação médica de suporte hospitalar em casa, o plano é obrigado a custear equipe de enfermagem 12h/24h, fisioterapia, fonoaudiologia, oxigênio, medicamentos e dietas enterais.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- O STJ pacificou que a cláusula restritiva de home care é nula (art. 51, IV do CDC), por esvaziar o objeto do contrato de assistência à saúde.
-- Distinção clara entre internação domiciliar técnica (ato de saúde contínuo) e serviço de cuidador familiar.
-- O fornecimento abrange estrutura multidisciplinar, insumos descartáveis, cama hospitalar articulada, aspiradores e suporte ventilatório.
-
----
-
-### ARTIGO 7: Reajuste Abusivo de Plano de Saúde em Curitiba: Como Contestar Aumentos por Idade e Sinistralidade
-**URL:** https://www.cicarelli.adv.br/blog/reajuste-abusivo-plano-de-saude-individual-coletivo  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** Aumentos expressivos aplicados por mudança de faixa etária aos 59 anos ou reajustes anuais de sinistralidade sem cálculo atuarial demonstrado em planos coletivos podem ser anulados judicialmente. A ação revisional reduz a mensalidade e recupera a diferença paga a maior nos últimos 3 anos corrigida.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- Tema Repetitivo 952 do STJ: O reajuste por faixa etária não pode ter caráter desarrazoado, aleatório ou discriminatório contra o idoso.
-- Tema Repetitivo 1016 do STJ: Em contratos coletivos, a operadora é obrigada a comprovar detalhadamente o cálculo atuarial da sinistralidade.
-- Falsos planos coletivos empresariais (MEI / microempresas familiares com poucas vidas) são equiparados a planos individuais para fins de teto da ANS.
-- O prazo de repetição de indébito é de 3 anos (36 parcelas passadas).
-
----
-
-### ARTIGO 8: Plano de Saúde e Tratamento de Câncer em Curitiba: Direitos a Quimioterapia, Radioterapia e Imunoterapia
-**URL:** https://www.cicarelli.adv.br/blog/plano-de-saude-cancer-tratamento-oncologico-imunoterapia  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** O paciente oncológico tem direito à cobertura integral, irrestrita e imediata de todos os tratamentos prescritos pelo oncologista (quimioterapia, imunoterapia, radioterapia de precisão, testes genéticos NGS e reconstrução mamária). As ações possuem prioridade máxima de tramitação processual (art. 1.048 do CPC).
-
-**Teses Jurídicas e Conteúdo Principal:**
-- Prazo de 10 dias para entrega de antineoplásicos orais (Lei 14.307/22).
-- Direito irrestrito à cirurgia plástica reconstrutiva de mama após mastectomia (art. 10-A da Lei 9.656/98 e Lei 12.802/13).
-- Cobertura obrigatória de exames genéticos somáticos para medicina de precisão (painéis moleculares de sequenciamento).
-- A negativa de tratamento gera dano moral presumido (*in re ipsa*) pela agravação do sofrimento psicológico.
-
----
-
-### ARTIGO 9: Cirurgia Bariátrica Negada pelo Plano de Saúde: Requisitos e Como Obter na Justiça em Curitiba
-**URL:** https://www.cicarelli.adv.br/blog/cirurgia-bariatrica-negada-plano-de-saude-requisitos  
-**Seção:** Direito da Saúde  
-**Resumo Executivo:** A cirurgia bariátrica (gastroplastia) possui cobertura obrigatória quando atendidos os critérios da ANS (IMC > 40 ou IMC > 35 com comorbidades e falha de tratamento clínico prévio). Cirurgias plásticas reparadoras pós-bariátrica para remoção de excesso de pele também são de cobertura obrigatória, conforme o Tema 1069 do STJ.
-
-**Teses Jurídicas e Conteúdo Principal:**
-- Resolução CFM nº 2.172/2017 e diretrizes de utilização da ANS para indicação de cirurgia bariátrica por videolaparoscopia.
-- Tema 1069 do STJ: As cirurgias plásticas reparadoras de pós-bariátrica têm cobertura obrigatória, pois não se confundem com procedimentos meramente estéticos.
-- Ilegalidade da alegação de doença preexistente sem realização prévia de exame admissional pela operadora (Súmula 105 TJSP).
-
----
-
-### ARTIGO 10: Defesa Médica em Curitiba: Como o Advogado Especialista Atua em Processos Éticos no CRM-PR, Judiciais e Hospitais
-**URL:** https://www.cicarelli.adv.br/blog/defesa-medica-processos-eticos-crm-cfm-sindicancias  
-**Seção:** Defesa Médica  
-**Resumo Executivo:** Assessoria jurídica especializada para médicos, clínicas e hospitais na condução de sindicâncias e Processos Ético-Profissionais (PEP) no CRM-PR e CFM, além de defesa técnica pericial em ações cíveis indenizatórias e blindagem jurídica preventiva (TCLE, prontuário eletrônico e marketing médico).
-
-**Teses Jurídicas e Conteúdo Principal:**
-- Rito processual do Código de Processo Ético-Profissional (Resolução CFM 2.306/2022) e importância da defesa prévia na sindicância para arquivamento liminar da denúncia.
-- Distinção técnico-jurídica entre erro médico culposo e intercorrência biológica / iatrogenia escusável descrita na literatura científica.
-- Elaboração de Termos de Consentimento Livre e Esclarecido (TCLE) personalizados e conformidade do prontuário médico.
-- Formulação de quesitos periciais estratégicos e indicação de assistente técnico em ações cíveis e criminais.
+Conteúdo informativo. Não substitui análise individual, não garante resultado ou prazo judicial.
+As fontes e datas dos novos guias estão nas páginas correspondentes. Não atribuir ao escritório casos, avaliações ou resultados não documentados.

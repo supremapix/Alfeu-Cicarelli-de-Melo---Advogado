@@ -149,7 +149,7 @@ Mensagem: ${formData.mensagem}`;
         <i className="ri-whatsapp-line mr-2 text-2xl"></i>
         Enviar pelo WhatsApp
       </Button>
-      <p className="text-center text-xs text-gray-400 mt-3">Rápido, seguro e 100% gratuito.</p>
+      <p className="text-center text-xs text-gray-400 mt-3">Confirme os dados antes de abrir o WhatsApp.</p>
     </form>
   );
 }

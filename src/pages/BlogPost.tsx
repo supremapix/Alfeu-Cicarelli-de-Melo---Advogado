@@ -1,3 +1,4 @@
+import NotFound from './NotFound';
 import { SEO } from "../components/SEO"
 import { useParams, Link, Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
@@ -13,7 +14,7 @@ export default function BlogPost() {
   const post = getPostBySlug(slug || '')
 
   if (!post) {
-    return <Navigate to="/blog" replace />
+    return <NotFound />
   }
 
   const articleSchema = {
@@ -26,24 +27,24 @@ export default function BlogPost() {
     "author": {
       "@type": "Organization",
       "name": "Cicarelli Sociedade de Advogados",
-      "url": "https://www.cicarelli.adv.br"
+      "url": "https://sp.cicarelli.adv.br"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Cicarelli Sociedade de Advogados",
-      "url": "https://www.cicarelli.adv.br",
+      "url": "https://sp.cicarelli.adv.br",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.cicarelli.adv.br/android-chrome-512x512.png"
+        "url": "https://sp.cicarelli.adv.br/android-chrome-512x512.png"
       }
     },
     "datePublished": post.datePublished || "2026-05-10T09:00:00-03:00",
     "dateModified": post.dateModified || "2026-08-14T12:00:00-03:00",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.cicarelli.adv.br/blog/${post.slug}`
+      "@id": `https://sp.cicarelli.adv.br/blog/${post.slug}`
     },
-    "image": "https://www.cicarelli.adv.br/og-image.png"
+    "image": "https://sp.cicarelli.adv.br/og-image.png"
   }
 
   return (
@@ -51,7 +52,7 @@ export default function BlogPost() {
       <SEO 
         title={`${post.title} | Cicarelli Sociedade de Advogados`} 
         description={post.excerpt}
-        canonical={`https://www.cicarelli.adv.br/blog/${post.slug}`}
+        canonical={`https://sp.cicarelli.adv.br/blog/${post.slug}`}
         customSchema={articleSchema}
         ogType="article"
       />
@@ -84,7 +85,7 @@ export default function BlogPost() {
             <i className="ri-arrow-left-line mr-2 text-lg"></i> Voltar para o Blog
           </Link>
           
-          <motion.div initial={{opacity: 0, y: 20}} animate={{opacity: 1, y: 0}}>
+          <motion.div initial={false} animate={{opacity: 1, y: 0}}>
             
             <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10">
               <div className="prose prose-lg max-w-none text-gray-800 prose-headings:font-serif prose-headings:text-primary prose-a:text-gold hover:prose-a:text-gold-dk prose-strong:text-primary marker:text-gold prose-details:border prose-details:border-gold/20 prose-details:rounded-xl prose-details:p-4 prose-details:my-4 prose-details:bg-gray-50/50 prose-summary:font-serif prose-summary:font-bold prose-summary:text-primary prose-summary:cursor-pointer prose-summary:text-lg hover:prose-summary:text-gold transition-colors">

@@ -27,7 +27,7 @@ export default function AreasDeAtuacao() {
       <HeroSection
         badge="Especialidades · São Paulo"
         title="Como protegemos os seus Direitos em São Paulo"
-        subtitle="Em um momento de fragilidade, nossa atuação especializada no Tribunal de Justiça de São Paulo (TJSP) garante as liminares ágeis necessárias para proteger sua saúde."
+        subtitle="Conheça os assuntos de atuação do escritório em Direito da Saúde. As medidas cabíveis dependem da análise individual dos documentos."
         height="small"
       />
 
@@ -38,7 +38,7 @@ export default function AreasDeAtuacao() {
             {areas.map((area, index) => (
               <motion.div 
                 key={area.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >

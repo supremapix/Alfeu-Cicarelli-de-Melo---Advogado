@@ -55,7 +55,7 @@ export function Header() {
               <button className="flex items-center text-xs xl:text-sm font-medium text-gray-200 hover:text-gold transition-colors tracking-wide py-2 whitespace-nowrap">
                 Atendimento SP <i className="ri-arrow-down-s-line ml-1"></i>
               </button>
-              <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50">
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="p-2 flex flex-col">
                   <Link to="/bairro/centro" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Centro</Link>
                   <Link to="/bairro/pinheiros" className="px-4 py-3 text-sm text-gray-700 hover:bg-gold/10 hover:text-primary rounded-lg transition-colors">Advogado Zona Oeste</Link>
@@ -98,7 +98,7 @@ export function Header() {
     </header>
 
       {/* Mobile Navigation Sheet */}
-      <div className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
+      <div hidden={!isMobileMenuOpen} className={`fixed inset-0 bg-primary z-[60] transition-transform duration-300 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden overflow-y-auto`}>
         <div className="pt-24 pb-8 px-6 flex flex-col min-h-screen">
           
           {/* Close Button inside the sheet */}
@@ -161,7 +161,7 @@ export function Header() {
 
           <div className="mt-auto pb-10">
             <Button className="w-full text-lg min-h-[64px] font-bold shadow-lg bg-gold hover:bg-gold-dk text-primary rounded-xl transition-all" asChild onClick={() => setIsMobileMenuOpen(false)}>
-              <Link to="/contato">Plantão 24h para Urgências</Link>
+              <Link to="/contato">Canais de atendimento</Link>
             </Button>
           </div>
         </div>

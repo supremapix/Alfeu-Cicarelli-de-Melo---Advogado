@@ -31,7 +31,7 @@ export default function Contato() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-gold-dk/10 rounded-full blur-3xl pointer-events-none" />
               
               <h2 className="font-serif text-3xl font-bold mb-8 relative z-10 text-gold">Fale no WhatsApp SP</h2>
-              <p className="text-gray-300 font-light mb-10 relative z-10">Envie suas negativas e laudos diretamente pelo formulário ao lado para direcionar ao nosso especialista em SP, ou utilize os contatos diretos abaixo.</p>
+              <p className="text-gray-300 font-light mb-10 relative z-10">Use o formulário ao lado para preparar uma mensagem no WhatsApp ou utilize os contatos abaixo. O formulário não recebe anexos. Antes de compartilhar documentos pessoais ou laudos, confirme com o escritório quais informações são necessárias e o canal adequado.</p>
               
               <div className="space-y-6 relative z-10">
                 <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="flex items-center group bg-navy-light/50 border border-white/5 p-4 rounded-2xl hover:border-gold/30 transition-all">

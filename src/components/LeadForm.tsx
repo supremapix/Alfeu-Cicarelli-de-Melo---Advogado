@@ -147,9 +147,9 @@ Mensagem: ${formData.mensagem}`;
 
       <Button type="submit" className="w-full h-14 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center">
         <i className="ri-whatsapp-line mr-2 text-2xl"></i>
-        Enviar pelo WhatsApp
+        Preparar mensagem no WhatsApp
       </Button>
-      <p className="text-center text-xs text-gray-400 mt-3">Confirme os dados antes de abrir o WhatsApp.</p>
+      <p className="text-center text-xs text-gray-400 mt-3">O botão abre o WhatsApp com o texto preparado. Revise e envie por lá para iniciar o contato.</p>
     </form>
   );
 }

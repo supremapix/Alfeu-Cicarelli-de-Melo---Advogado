@@ -16,7 +16,7 @@ export default function Blog() {
       <SEO 
         title="Blog Jurídico | Cicarelli Sociedade de Advogados" 
         description="Artigos sobre Direito da Saúde, negativas de planos de saúde, liminares, reajustes abusivos e defesa médica em Curitiba e todo o Brasil."
-        canonical="https://www.cicarelli.adv.br/blog"
+        canonical="https://sp.cicarelli.adv.br/blog"
       />
       
       <HeroSection
@@ -39,6 +39,7 @@ export default function Blog() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gold/10 hover:shadow-elegant hover:border-gold/30 transition-all flex flex-col"
               >
+                {post.cover && <img src={post.cover.path} alt="" width={post.cover.width} height={post.cover.height} loading="lazy" decoding="async" className="w-full h-auto" />}
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex justify-between items-center mb-4 text-xs font-semibold uppercase tracking-widest text-gray-400">
                     <span className="text-gold">{post.tag}</span>

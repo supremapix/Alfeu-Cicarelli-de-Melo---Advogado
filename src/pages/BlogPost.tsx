@@ -44,7 +44,7 @@ export default function BlogPost() {
       "@type": "WebPage",
       "@id": `https://sp.cicarelli.adv.br/blog/${post.slug}`
     },
-    "image": "https://sp.cicarelli.adv.br/og-image.png"
+    "image": post.cover ? { "@type": "ImageObject", "url": "https://sp.cicarelli.adv.br" + post.cover.path, "width": post.cover.width, "height": post.cover.height } : "https://sp.cicarelli.adv.br/og-image.png"
   }
 
   return (
@@ -55,6 +55,7 @@ export default function BlogPost() {
         canonical={`https://sp.cicarelli.adv.br/blog/${post.slug}`}
         customSchema={articleSchema}
         ogType="article"
+        ogImage={post.cover}
       />
       
       <HeroSection
@@ -88,27 +89,37 @@ export default function BlogPost() {
           <motion.div initial={false} animate={{opacity: 1, y: 0}}>
             
             <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gold/10">
+              {post.cover && <figure className="mb-8">
+                <img src={post.cover.path} alt={post.cover.alt} width={post.cover.width} height={post.cover.height} decoding="async" className="w-full h-auto rounded-2xl" />
+                <figcaption className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm leading-relaxed text-gray-700">
+                  <span>Reconstituição visual ilustrativa; não é fotografia de arquivo.</span>
+                  <span className="inline-flex items-center gap-2"><img src="/android-chrome-192x192.png" alt="" width="24" height="24" loading="lazy" /> <span>Cicarelli Sociedade de Advogados · <a href="tel:+5541999580015" className="underline">(41) 99958-0015</a></span></span>
+                </figcaption>
+              </figure>}
+              {post.editorialHistory && <ul className="mb-8 flex flex-wrap gap-2" aria-label="Temas do artigo">
+                {['ABC industrial','Convênios-empresa','Dados da ANS'].map(label => <li key={label} className="rounded-full bg-[#e7eef5] px-3 py-1.5 font-semibold text-[#163248] motion-safe:transition-transform motion-safe:hover:-translate-y-0.5">{label}</li>)}
+              </ul>}
               <div className="prose prose-lg max-w-none text-gray-800 prose-headings:font-serif prose-headings:text-primary prose-a:text-gold hover:prose-a:text-gold-dk prose-strong:text-primary marker:text-gold prose-details:border prose-details:border-gold/20 prose-details:rounded-xl prose-details:p-4 prose-details:my-4 prose-details:bg-gray-50/50 prose-summary:font-serif prose-summary:font-bold prose-summary:text-primary prose-summary:cursor-pointer prose-summary:text-lg hover:prose-summary:text-gold transition-colors">
                 <Markdown rehypePlugins={[rehypeRaw]}>{post.content}</Markdown>
               </div>
               
-              <div className="mt-12 pt-8 border-t border-gold/20 flex flex-col items-center bg-navy-light/5 p-8 rounded-2xl">
+              {!post.editorialHistory && <div className="mt-12 pt-8 border-t border-gold/20 flex flex-col items-center bg-navy-light/5 p-8 rounded-2xl">
                 <h3 className="font-serif text-2xl font-bold text-primary mb-4 text-center">Precisa de suporte jurídico especializado?</h3>
                 <p className="text-gray-600 mb-6 text-center max-w-xl">Nossa equipe atua em Curitiba, Região Metropolitana, todo o Paraná e território nacional. Tire suas dúvidas com um especialista.</p>
                 <a href="https://wa.me/5541999580015" target="_blank" rel="noopener noreferrer" className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-green-600/30 transition-all flex items-center">
                   <i className="ri-whatsapp-fill text-2xl mr-2"></i> Falar com Especialista
                 </a>
-              </div>
+              </div>}
             </div>
           </motion.div>
         </div>
       </div>
 
-      <AdvogadoProfile 
+      {!post.editorialHistory && <AdvogadoProfile 
         imageIndex={2} 
         title="Cicarelli Sociedade de Advogados" 
         altText="Cicarelli Sociedade de Advogados - Especialistas em Direito da Saúde e Defesa Médica" 
-      />
+      />}
     </>
   )
 }

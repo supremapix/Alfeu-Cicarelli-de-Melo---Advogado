@@ -12,9 +12,32 @@ export interface BlogPost {
   tag: string;
   articleSection: string;
   readTime: string;
+  editorialHistory?: boolean;
+  cover?: { path: string; alt: string; width: number; height: number };
 }
 
 export const blogPosts: BlogPost[] = [
+{
+  "id": "historia-convenios-empresariais-sp",
+  "slug": "historia-dos-convenios-empresariais-em-sao-paulo",
+  "title": "Dos convênios de fábrica aos planos coletivos: um capítulo paulista",
+  "excerpt": "Da medicina de grupo no ABC industrial aos painéis públicos da ANS: conheça o papel de São Paulo na história dos planos coletivos e entenda o que esses dados mostram.",
+  "date": "22 de novembro de 2026",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-22",
+  "author": "Cicarelli Sociedade de Advogados",
+  "tag": "História da saúde suplementar",
+  "articleSection": "História da saúde suplementar em São Paulo",
+  "readTime": "5 min de leitura",
+  "editorialHistory": true,
+  "cover": {
+    "path": "/editorial/convenios-empresariais-sao-paulo.webp",
+    "alt": "Ilustração de trabalhadores chegando a um ambulatório numa rua industrial paulista",
+    "width": 1200,
+    "height": 675
+  },
+  "content": "Durante a industrializaçãode São Paulo, parte do atendimento médico aos trabalhadores passou a ser organizada no próprio local de trabalho ou contratada pelas empresas. No ABC paulista, o tamanho das fábricas criou demanda para serviços capazes de atender muitos empregados sob um mesmo arranjo. Essa é uma das histórias por trás da expansão da medicina de grupo no Brasil. Não é a história de um único fundador, nem de uma única forma de assistência.\n\n## Anos 1950 e 1960: por que o ABC aparece nessa história?\n\nEntre os anos 1950 e 1960 surgiram no país empresas que organizavam o atendimento para grupos de trabalhadores. As primeiras experiências paulistas aparecem associadas ao ABC industrial, onde grandes empregadores contratavam serviços médicos para suas equipes. Isso não torna São Paulo a única origem dos planos privados. A pesquisa histórica publicada em *Cadernos de Saúde Pública* documenta trajetórias diferentes e também destaca o Rio de Janeiro na contratação de empresas médicas. [Estudo histórico de Bahia e colaboradores](https://new.scielo.br/j/csp/a/vTTZd9zPqrDjHwDZMZKTnMf/?ilang=pt_BR&lang=pt)\n\nUm detalhe explica o nome: no contexto da época, “medicina de grupo” não significava apenas que vários médicos atendiam no mesmo endereço. Designava uma forma de organizar e prestar assistência a uma população vinculada, por meio de empresas médicas que reuniam ou contratavam profissionais e serviços. O empregador podia contratar a assistência, mas não era necessariamente quem prestava atendimento.\n\n## A partir do fim dos anos 1960: o papel dos convênios-empresa\n\nOs convênios aproximaram três atores: Previdência Social, empregadores e prestadores. Em parte desses arranjos, a empresa assumia a organização do atendimento aos trabalhadores e podia contratar um grupo médico; a Previdência participava do financiamento. Com a ampliação dessa política no INPS, a contratação por organizações empregadoras ganhou escala em regiões com concentração industrial. Posteriormente, também se expandiram contratos em que o empregador contratava grupos médicos sem aquela intermediação da Previdência. [Pesquisa sobre os convênios e sua expansão](https://www.scielo.br/j/csc/a/yfqr4h3RLBHRPvr98WTNQcy/?format=html&lang=pt)\n\nA semelhança com um benefício empresarial contemporâneo está na presença de um contratante coletivo. Isso não faz de um contrato atual a continuação jurídica de um convênio da época. O nome usado em conversas cotidianas, como “convênio da empresa”, não especifica sozinho como o produto é contratado ou cadastrado hoje.\n\n## São Paulo hoje: o que é possível enxergar nos dados públicos?\n\nO **Painel dos Contratantes de Planos de Saúde Coletivos**, da ANS, permite cruzar a unidade da Federação da empresa contratante com o setor de atividade, o porte e o tipo de contratação. Também mostra recortes como assistência médica ou exclusivamente odontológica e titulares ou dependentes. Essa organização ajuda a investigar a presença da contratação coletiva para além das fábricas, inclusive no comércio e nos serviços, sem confundir as categorias. [Painel e metodologia da ANS](https://www.gov.br/ans/pt-br/assuntos/contratante/painel-dos-contratantes)\n\nHá outro recorte útil. No **Caderno de Informação da Saúde Suplementar de setembro de 2026**, a tabela 4 registra, com referência de **junho de 2026**, taxa de cobertura de planos de assistência médica, com ou sem odontologia, de **40,6% no estado de São Paulo** e **50,3% na capital**. É um indicador de todos os tipos de contratação desse recorte assistencial, não apenas de planos empresariais. A ANS informa que conta vínculos e que uma pessoa pode ter mais de um. Os números são preliminares e não equivalem à porcentagem exata de pessoas distintas com plano. [Caderno da ANS, tabela 4](https://dadosabertos.ans.gov.br/FTP/PDA/caderno_de_informacao/2026/caderno_set26.html)\n\nOs dois recortes respondem a perguntas diferentes: a unidade da Federação da **contratante** é um atributo da empresa no painel; a taxa de cobertura é um indicador da **localização da população e dos vínculos**. A primeira informação não determina onde cada beneficiário vive ou é atendido. Nenhum desses indicadores descreve o que está previsto num contrato específico.\n\n## Perguntas frequentes\n\n### A medicina de grupo nasceu exclusivamente em São Paulo?\n\nNão há base para atribuir toda a origem a um único lugar. O ABC industrial paulista foi um polo inicial importante, e pesquisas descrevem trajetórias diferentes em outras partes do país.\n\n### “Medicina de grupo” e “coletivo empresarial” significam a mesma coisa?\n\nNão. No painel da ANS, “coletivo empresarial” aparece como tipo de contratação. A modalidade da operadora é uma dimensão separada. Uma expressão descreve como o plano é contratado; a outra pode descrever a forma de organização da empresa que opera o plano.\n\n### O número de vínculos da ANS é o número de pessoas com plano?\n\nNão necessariamente. Uma pessoa ligada a mais de um plano pode constar mais de uma vez. Ao comparar indicadores, observe a data de referência, o recorte geográfico e se o dado corresponde à assistência médica, odontológica ou a ambas.\n\n---\n\n*Conteúdo histórico e informativo. Os indicadores descrevem recortes do setor; não determinam condições contratuais ou direitos em casos individuais.*"
+},
   ...guides,
   {
     id: "1",
